@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="main-page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>печатные платы</title>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/robotocondensedbold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="style" href="./css/style.min.css"/>
+    <link rel="preload" as="script" href="./js/script.js"/>
+  </head>
+  <!-- <body>
+    <div style="display: none">
+      <include src="docs/img/sprite_auto.svg"></include>
+    </div>
+    <header class="header header--no-js">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#views">Виды велосипедов</a></li>
+          <li><a href="#video">Видео про велосипеды</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle-menu" type="button" aria-label="открыть/закрыть меню"></button>
+    </header>
+    <main class="main">
+      <section class="lead">
+        <div class="lead__center">
+          <a class="lead__logo">
+            <svg class="lead__logo-svg" width="80">
+              <use xlink: href="#logo"></use>
+            </svg>
+          </a>
+          <div class="lead__wrapper">
+            <h1>Мы продаем велосипеды</h1>
+            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          </div>
+          <h2 class="visually-hidden">Форма заполнения данных</h2>
+          <form class="lead__form form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form__fieldset">
+              <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
+              <input id="name" type="text" name="user-name" required placeholder="Введите Ваше Имя">
+              <label class="visually-hidden" for="name">поле для ввода имени</label>
+              <input id="tel" type="tel" name="user-tel" required placeholder="Введите Ваш номер телефона"
+              pattern="+[0-9]{12}" minlength="11" maxlength="12">
+              <label class="visually-hidden" for="tel">поле ввода телефона"</label>
+              <button type="submit">Подобрать велосипед мечты</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2>Несколько фактов о нас</h2>
+        <ol class="about__list">
+          <li>Самый широкий выбор велосипедов!</li>
+          <li>Доставка велосипедов по всей России!</li>
+          <li>Большой выбор крутых аксессуаров!</li>
+          <li>Профессиональные консультации!</li>
+        </ol>
+      </section>
+      <section class="views" id="views">
+        <h2 class="views__title">Виды велосипедов</h2>
+        <div class="views__center">
+          <ul class="views__list">
+            <li class="views__item">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="./img/andreas-haimerl.webp 1x, ./img/andreas-haimerl@2x.webp 2x">
+                  <img loading="lazy" src="./img/andreas-haimerl.jpg" srcset="./img/andreas-haimerl@2x.jpg 2x" width="342" height="503" alt="велосипед с багажником, закреплённым на переднем колесе">
+                </picture>
+                <figcaption>Дорожный велосипед</figcaption>
+              </figure>
+            </li>
+            <li class="views__item">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="./img/eberhard-grossgasteiger.webp 1x, ./img/eberhard-grossgasteiger@2x.webp 2x">
+                  <img loading="lazy" src="./img/eberhard-grossgasteiger.jpg" srcset="./img/eberhard-grossgasteiger@2x.jpg 2x" width="342" height="566" alt="велосипед, на фоне гор">
+                </picture>
+                <figcaption>Горный велосипед</figcaption>
+              </figure>
+            </li>
+            <li class="views__item">
+              <figure>
+                <picture>
+                  <source type="image/webp" srcset="./img/roger-goh.webp 1x, ./img/roger-goh@2x.webp 2x">
+                  <img loading="lazy" src="./img/roger-goh.jpg" srcset="./img/roger-goh@2x.jpg 2x" width="342" height="513" alt="маленький велосипед с белой рамой и красными крыльями ">
+                </picture>
+                <figcaption>Детский велосипед</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="video" id="video">
+        <h2>Видео про велосипеды</h2>
+        <P>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</P>
+        <div class="video__player">
+          <picture>
+            <source type="image/webp" srcset="./img/josh-nuttall.webp 1x, ./img/josh-nuttall@2x.webp 2x">
+            <img loading="lazy" src="./img/josh-nuttall.jpg" srcset="./img/josh-nuttall@2x.jpg 2x" width="929" height="522" alt="гоночный велосипед на черном фоне">
+          </picture>
+          <button class="video__button" type="button" aria-label="кнопка включения видео"></button>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <h2>Как нас найти?</h2>
+        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <picture>
+          <source type="image/webp" srcset="./img/map.webp 1x, ./img/map@2x.webp 2x">
+          <img loading="lazy" src="./img/map.png" srcset="./img/map@2x.png 2x" width="957" height="530" alt="карта">
+        </picture>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body> -->
+</html>
