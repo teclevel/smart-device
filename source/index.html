@@ -11,114 +11,140 @@
     <link rel="preload" as="style" href="./css/style.min.css"/>
     <link rel="preload" as="script" href="./js/script.js"/>
   </head>
-  <!-- <body>
+  <body>
     <div style="display: none">
-      <include src="docs/img/sprite_auto.svg"></include>
+      <include src="build/img/sprite_auto.svg"></include>
     </div>
-    <header class="header header--no-js">
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#views">Виды велосипедов</a></li>
-          <li><a href="#video">Видео про велосипеды</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-      <button class="header__toggle-menu" type="button" aria-label="открыть/закрыть меню"></button>
+    <header class="header">
+      <div class="header__menu">
+        <a>
+          <svg class="header__logo-desktop" width="202" height="52">
+            <use xlink: href="#logo-desktop"></use>
+          </svg>
+          <svg class="header__logo-mobile" width="38" height="38">
+            <use xlink: href="#logo-mobile"></use>
+          </svg>
+        </a>
+        <div class="header__contacts">
+          <ul class="header__contacts-list"></ul>
+            <li><a href="info@sd.ru">info@sd.ru</a></li>
+            <li><a href="tel:+749978468446">+7 (495) 000 52 52</a></li>
+          </ul>
+          <button class="header__order" type="button" aria-label="открыть форму">заказать звонок</button>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="lead">
-        <div class="lead__center">
-          <a class="lead__logo">
-            <svg class="lead__logo-svg" width="80">
-              <use xlink: href="#logo"></use>
+        <h1 class="lead__title">Печатные платы</h1>
+        <p class="lead__description">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="lead__link-consultation" href="#">Получить бесплатную консультацию</a>
+        <a class="lead__link-scroll" href="#features">Скролл вниз</a>
+      </section>
+      <section class="features" id="features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features">
+          <li>
+            <svg width="29" height="35">
+              <use xlink: href="#stopwatch"></use>
             </svg>
-          </a>
-          <div class="lead__wrapper">
-            <h1>Мы продаем велосипеды</h1>
-            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-          </div>
-          <h2 class="visually-hidden">Форма заполнения данных</h2>
-          <form class="lead__form form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__fieldset">
-              <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
-              <input id="name" type="text" name="user-name" required placeholder="Введите Ваше Имя">
-              <label class="visually-hidden" for="name">поле для ввода имени</label>
-              <input id="tel" type="tel" name="user-tel" required placeholder="Введите Ваш номер телефона"
-              pattern="+[0-9]{12}" minlength="11" maxlength="12">
-              <label class="visually-hidden" for="tel">поле ввода телефона"</label>
-              <button type="submit">Подобрать велосипед мечты</button>
-            </fieldset>
-          </form>
-        </div>
+            <h3 class="features__card-title">Оперативные сроки</h3>
+            <p class="features__card-description">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li>
+            <svg width="35" height="35">
+              <use xlink: href="#hired"></use>
+            </svg>
+            <h3 class="features__card-title">Крупные поставщики</h3>
+            <p class="features__card-description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <li>
+            <svg width="36" height="31">
+              <use xlink: href="#detective"></use>
+            </svg>
+            <h3 class="features__card-title">Полная конфиденциальность</h3>
+            <p class="features__card-description">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li>
+            <svg width="35" height="35">
+              <use xlink: href="#tag"></use>
+            </svg>
+            <h3 class="features__card-title">Персонализация стоимости</h3>
+            <p class="features__card-description">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
       </section>
-      <section class="about" id="about">
-        <h2>Несколько фактов о нас</h2>
-        <ol class="about__list">
-          <li>Самый широкий выбор велосипедов!</li>
-          <li>Доставка велосипедов по всей России!</li>
-          <li>Большой выбор крутых аксессуаров!</li>
-          <li>Профессиональные консультации!</li>
-        </ol>
+      <section class="about">
+        <h2 class="about__title">О компании</h2>
+        <p class="about__description">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p class="about__description">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+        <button type="button">Подробнее</button>
       </section>
-      <section class="views" id="views">
-        <h2 class="views__title">Виды велосипедов</h2>
-        <div class="views__center">
-          <ul class="views__list">
-            <li class="views__item">
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./img/andreas-haimerl.webp 1x, ./img/andreas-haimerl@2x.webp 2x">
-                  <img loading="lazy" src="./img/andreas-haimerl.jpg" srcset="./img/andreas-haimerl@2x.jpg 2x" width="342" height="503" alt="велосипед с багажником, закреплённым на переднем колесе">
-                </picture>
-                <figcaption>Дорожный велосипед</figcaption>
-              </figure>
-            </li>
-            <li class="views__item">
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./img/eberhard-grossgasteiger.webp 1x, ./img/eberhard-grossgasteiger@2x.webp 2x">
-                  <img loading="lazy" src="./img/eberhard-grossgasteiger.jpg" srcset="./img/eberhard-grossgasteiger@2x.jpg 2x" width="342" height="566" alt="велосипед, на фоне гор">
-                </picture>
-                <figcaption>Горный велосипед</figcaption>
-              </figure>
-            </li>
-            <li class="views__item">
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./img/roger-goh.webp 1x, ./img/roger-goh@2x.webp 2x">
-                  <img loading="lazy" src="./img/roger-goh.jpg" srcset="./img/roger-goh@2x.jpg 2x" width="342" height="513" alt="маленький велосипед с белой рамой и красными крыльями ">
-                </picture>
-                <figcaption>Детский велосипед</figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
+      <section class="offer">
+        <h2>Service Device предлагает следующие товары и услуги</h2>
+        <ul>
+          <li>
+            <a href="#">
+            <figure>
+              <figcaption>Производство печатных плат</figcaption>
+              <picture>
+                <source type="image/webp" srcset="./img/boards-production.webp 1x, ./img/boards-production@2x.webp 2x">
+                <img loading="lazy" src="./img/boards-production.png" srcset="./img/boards-production@2x.png 2x" width="370" height="620" alt="печатная плата в процессе производства">
+              </picture>
+            </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+            <figure>
+              <figcaption>Монтаж печатных плат</figcaption>
+              <picture>
+                <source type="image/webp" srcset="./img/boards-mounting.webp 1x, ./img/boards-mounting@2x.webp 2x">
+                <img loading="lazy" src="./img/boards-mounting.jpg" srcset="./img/boards-mounting@2x.jpg 2x" width="370" height="620" alt="пайка микросхемы к плате">
+              </picture>
+            </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+            <figure>
+              <figcaption>Комплектующие для светотехники</figcaption>
+              <picture>
+                <source type="image/webp" srcset="./img/accessories.webp 1x, ./img/accessories@2x.webp 2x">
+                <img loading="lazy" src="./img/accessories.jpg" srcset="./img/accessories@2x.jpg 2x" width="370" height="620" alt="светодиодная лента">
+              </picture>
+            </figure>
+            </a>
+          </li>
+        </ul>
       </section>
-      <section class="video" id="video">
-        <h2>Видео про велосипеды</h2>
-        <P>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</P>
-        <div class="video__player">
-          <picture>
-            <source type="image/webp" srcset="./img/josh-nuttall.webp 1x, ./img/josh-nuttall@2x.webp 2x">
-            <img loading="lazy" src="./img/josh-nuttall.jpg" srcset="./img/josh-nuttall@2x.jpg 2x" width="929" height="522" alt="гоночный велосипед на черном фоне">
-          </picture>
-          <button class="video__button" type="button" aria-label="кнопка включения видео"></button>
-        </div>
+      <section class="form">
+
       </section>
-      <section class="contacts" id="contacts">
-        <h2>Как нас найти?</h2>
-        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-        <picture>
-          <source type="image/webp" srcset="./img/map.webp 1x, ./img/map@2x.webp 2x">
-          <img loading="lazy" src="./img/map.png" srcset="./img/map@2x.png 2x" width="957" height="530" alt="карта">
-        </picture>
-      </section>
+
+
     </main>
     <footer class="footer">
-      <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+      <!-- <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <a href="tel:+749978468446">+7 (499) -784-684-46</a> -->
     </footer>
     <script src="./js/script.js"></script>
-  </body> -->
+  </body>
 </html>
+<!--
+            <div class="lead__wrapper">
+              <h1>Мы продаем велосипеды</h1>
+              <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            </div>
+            <h2 class="visually-hidden">Форма заполнения данных</h2>
+            <form class="lead__form form" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="form__fieldset">
+                <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
+                <input id="name" type="text" name="user-name" required placeholder="Введите Ваше Имя">
+                <label class="visually-hidden" for="name">поле для ввода имени</label>
+                <input id="tel" type="tel" name="user-tel" required placeholder="Введите Ваш номер телефона"
+                pattern="+[0-9]{12}" minlength="11" maxlength="12">
+                <label class="visually-hidden" for="tel">поле ввода телефона"</label>
+                <button type="submit">Подобрать велосипед мечты</button>
+              </fieldset>
+            </form> -->
