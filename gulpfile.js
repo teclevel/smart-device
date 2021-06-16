@@ -1,6 +1,6 @@
 'use strict';
 
-const gulp = require('gulp');
+var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sourcemap = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
