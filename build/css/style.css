@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/robotocondensed.woff2") format("woff2"), url("../fonts/robotocondensed.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff"); }
+
+@font-face {
+  font-family: "PT Mono";
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/ptmono.woff2") format("woff2"), url("../fonts/ptmono.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff"); }
+
+.main-page {
+  height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%; }
+
+body .main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.header {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 1411px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.lead {
+  min-height: 878px;
+  background-image: url("../img/backgrounds/pattern.png"), url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
+  background-color: #1b2d37;
+  background-repeat: no-repeat;
+  background-size: cover, 720px, 1500px;
+  background-position-x: center, right, right;
+  background-position-y: center; }
+
+/* https://ru.w3docs.com/snippets/css/kak-ispolzovat-neskolko-fonovykh-izobrazhenii-s-pomoshchiu-css.html */

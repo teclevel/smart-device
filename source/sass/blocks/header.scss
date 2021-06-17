@@ -1,14 +1,18 @@
-// .header {
+.header {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 1411px;
+    display: flex;
+    
+}
 //   font-weight: 300;
 //   font-size: 16px;
 //   line-height: 32px;
 //   color: $white;
 //   min-height: 62px;
-//   position: absolute;
-//   background-color: transparent;
-//   top: 0;
-//   right: 0;
-//   left: 0;
 //   z-index: 20;
 
 //   @media (max-width: $tablet-width) {
