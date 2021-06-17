@@ -1,9 +1,17 @@
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   min-height: 100%;
+  // min-height: 878px;
+  background-image: url("../img/backgrounds/pattern.png"),
+    url("../img/backgrounds/boards.png"),
+    url("../img/backgrounds/poligons-header.svg");
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-size:  cover, auto, auto;
+  background-position: center, 90% 50%, 90% 50%;
 }
 
 body .main {
-  flex-grow: 1;
+  // flex-grow: 1;
 }
