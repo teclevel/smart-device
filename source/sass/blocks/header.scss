@@ -1,10 +1,18 @@
 .header {
-  max-width: 1411px;
+  max-width: 1431px;
   width: 100%;
   margin: 0 auto;
   padding: 33px 10px 0 10px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    padding: 20px 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 17px;
+  }
 }
 
 .header__logo-mobile {
