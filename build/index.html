@@ -11,7 +11,7 @@
     <link rel="preload" as="style" href="./css/style.min.css">
     <link rel="preload" as="script" href="./js/script.js">
   </head>
-  <body>
+  <body class="page-body">
     <div style="display: none">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="detective" viewBox="0 0 36 31">
 <path d="M18 9.75821C17.6119 9.75821 17.2969 10.0752 17.2969 10.4663C17.2969 10.8571 17.6119 11.1743 18 11.1743C18.3881 11.1743 18.7031 10.8571 18.7031 10.4663C18.7031 10.0752 18.3881 9.75821 18 9.75821Z" fill="#00B2FF"></path>
@@ -84,8 +84,22 @@
         </a>
         <div class="header__contacts">
           <ul class="header__contacts-list">
-            <li><a href="info@sd.ru">info@sd.ru</a></li>
-            <li><a href="tel:+749978468446">+7 (495) 000 52 52</a></li>
+            <li>
+              <a href="mailto:info@sd.ru">
+                <svg class="header__logo-letter" width="26" height="17">
+                  <use xlink:="" href="#letter"></use>
+                </svg>
+                <span class="header__email">info@sd.ru</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+749978468446">
+                <svg class="header__logo-phone-call" width="24" height="24">
+                  <use xlink:="" href="#phone-call"></use>
+                </svg>
+                <span class="header__tel">+7 (495) 000 52 52</span>
+              </a>
+            </li>
           </ul>
           <button class="header__button-order" type="button" aria-label="открыть форму">заказать звонок</button>
         </div>
@@ -251,5 +265,3 @@
     <script src="./js/script.js"></script> -->
   </body>
 </html>
-
-

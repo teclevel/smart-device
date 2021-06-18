@@ -1,3 +1,13 @@
+/*
+
+@media (max-width: $tablet-width) {
+
+}
+
+@media (max-width: $mobile-width) {
+
+}
+ */
 *,
 *::before,
 *::after {
@@ -57,8 +67,10 @@ img {
 .main-page {
   height: 100%; }
 
-body {
-  min-height: 100%;
+.page-body {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
   background-image: url("../img/backgrounds/pattern.png"), url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
   background-color: #1b2d37;
   background-repeat: no-repeat;
@@ -67,6 +79,7 @@ body {
 
 .header {
   max-width: 1411px;
+  width: 100%;
   margin: 0 auto;
   padding: 33px 10px 0 10px;
   display: -webkit-box;
@@ -78,6 +91,13 @@ body {
 
 .header__logo-mobile {
   display: none; }
+  @media (max-width: 767px) {
+    .header__logo-mobile {
+      display: block; } }
+
+@media (max-width: 767px) {
+  .header__logo-desktop {
+    display: none; } }
 
 .header__contacts {
   display: -webkit-box;
@@ -90,13 +110,21 @@ body {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (max-width: 1023px) {
+    .header__contacts-list {
+      margin: 0; } }
 
 .header__contacts-list li {
   -ms-flex-item-align: center;
       align-self: center;
-  padding: 5px 0;
+  padding: 5px;
   min-width: 187px; }
+  @media (max-width: 1023px) {
+    .header__contacts-list li {
+      min-width: 50px; } }
 
 .header__contacts-list a {
   position: relative;
@@ -105,31 +133,24 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
-  padding: 0 0 0 50px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px; }
   .header__contacts-list a:hover, .header__contacts-list a:focus {
     opacity: 0.5; }
   .header__contacts-list a:active {
     opacity: 1; }
 
-.header__contacts-list a[href*="@"]::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/icons/letter.svg");
-  background-repeat: no-repeat; }
-
-.header__contacts-list a[href*="tel"]::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/icons/phone-call.svg");
-  background-repeat: no-repeat; }
+@media (max-width: 1023px) {
+  .header__email,
+  .header__tel {
+    display: none; } }
 
 .header__button-order {
   font-weight: bold;
@@ -150,5 +171,9 @@ body {
     opacity: 0.5; }
   .header__button-order:active {
     opacity: 1; }
+  @media (max-width: 1023px) {
+    .header__button-order {
+      display: none; } }
 
-/* https://ru.w3docs.com/snippets/css/kak-ispolzovat-neskolko-fonovykh-izobrazhenii-s-pomoshchiu-css.html */
+.lead {
+  padding: 0; }

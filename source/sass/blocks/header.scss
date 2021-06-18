@@ -1,5 +1,6 @@
 .header {
   max-width: 1411px;
+  width: 100%;
   margin: 0 auto;
   padding: 33px 10px 0 10px;
   display: flex;
@@ -8,6 +9,16 @@
 
 .header__logo-mobile {
   display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.header__logo-desktop {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .header__contacts {
@@ -19,13 +30,21 @@
   padding: 0;
   list-style: none;
   display: flex;
-  // column-gap: 80px;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .header__contacts-list li {
   align-self: center;
-  padding: 5px 0;
+  padding: 5px;
   min-width: 187px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 50px;
+  }
 }
 
 .header__contacts-list a {
@@ -35,7 +54,9 @@
   font-size: 16px;
   line-height: 18px;
   color: $white;
-  padding: 0 0 0 50px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 
   &:hover,
   &:focus {
@@ -47,29 +68,10 @@
   }
 }
 
-.header__contacts-list a[href*="@"] {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 20px ;
-    height: 20px ;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons/letter.svg");
-    background-repeat: no-repeat;
-  }
-}
-
-.header__contacts-list a[href*="tel"] {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 20px ;
-    height: 20px ;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons/phone-call.svg");
-    background-repeat: no-repeat;
+.header__email,
+.header__tel {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -95,5 +97,9 @@
 
   &:active {
     opacity: 1;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
