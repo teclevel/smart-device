@@ -1,3 +1,9 @@
 .main {
   display: grid;
 }
+
+.main__background {
+  background-image: url("../img/backgrounds/background-about.svg");
+  background-repeat: no-repeat;
+  background-color: $white;
+}

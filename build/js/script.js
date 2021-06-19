@@ -1,4 +1,4 @@
-
+// // 'use strict';
 // const pageHeader = document.querySelector('.header');
 // const headerToggle = document.querySelector('.header__toggle-menu');
 // const pageBody = document.querySelector('body');
