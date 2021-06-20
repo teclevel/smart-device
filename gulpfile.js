@@ -1,20 +1,20 @@
 'use strict';
 
-var gulp  = require('gulp');
-var plumber = require('gulp-plumber');
-var sourcemap = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var server = require('browser-sync').create();
-var csso = require('gulp-csso');
-var rename = require('gulp-rename');
-var imagemin = require('gulp-imagemin');
-var webp = require('gulp-webp');
-var svgstore = require('gulp-svgstore');
-var posthtml = require('gulp-posthtml');
-var include = require('posthtml-include');
-var del = require('del');
+const gulp  = require('gulp');
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const server = require('browser-sync').create();
+const csso = require('gulp-csso');
+const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
+const del = require('del');
 
 gulp.task('css', function () {
   return gulp.src('source/sass/style.scss')
@@ -40,6 +40,11 @@ gulp.task('normalize', function () {
       .pipe(server.stream());
 });
 
+gulp.task('js', function () {
+  return gulp.src('source/js/*.js')
+      .pipe(gulp.dest('build/js'))
+});
+
 gulp.task('server', function () {
   server.init({
     server: 'build/',
@@ -52,6 +57,7 @@ gulp.task('server', function () {
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('source/js/*.js', gulp.series('js', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {

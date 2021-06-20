@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.6",
-    "browser-sync": "2.26.14",
+    "browser-sync": "2.26.x",
     "eslint": "7.29.0",
     "eslint-config-htmlacademy": "4.0.2",
     "gulp": "4.0.2",
@@ -32,7 +32,8 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "server": "gulp server"
   },
   "browserslist": [
     "last 2 versions",
