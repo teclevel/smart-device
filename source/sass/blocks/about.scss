@@ -1,0 +1,91 @@
+.about {
+  position: relative;
+  color: $grey-text;
+  max-width: 1431px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 96px 200px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 317px;
+    left: 0;
+    top: 0;
+    background-image: url("../img/backgrounds/digits.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: $tablet-width) {
+      width: 251px;
+      height: 362px;
+    }
+
+    @media (max-width: $mobile-width) {
+      content: none;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 25px 96px 200px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 14px 65px;
+  }
+}
+
+.about__title {
+  font-family: $font-family--title;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+  }
+}
+
+.about__description {
+  font-family: $font-family--description;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  max-width: 970px;
+  margin: 0 0 30px 0;
+}
+
+.about__text-crop {
+  overflow: hidden;
+  min-height: 153px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 110px;
+  }
+
+}
+
+.about__button {
+  font-family: $font-family--title;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  padding: 15px 15px;
+  width: 180px;
+}

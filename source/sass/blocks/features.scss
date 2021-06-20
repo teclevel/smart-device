@@ -1,15 +1,29 @@
 .features {
-  padding: 69px calc(50% - 711px) 110px;
+  padding: 69px calc(50% - 730px) 110px;
+
+  @media (max-width: $tablet-width) {
+    padding: 54px 25px 54px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 21px 14px 60px;
+  }
 }
 
 .features__list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 30px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 }
 
 .features__list li {
@@ -18,6 +32,7 @@
   padding: 40px 45px;
   border: 1px solid $grey;
   background-color: $white;
+  cursor: pointer;
 
   &::before {
     position: absolute;
