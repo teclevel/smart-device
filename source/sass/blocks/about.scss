@@ -62,8 +62,7 @@
 }
 
 .about__text-crop {
-  overflow: hidden;
-  min-height: 153px;
+  min-height: 95px;
 
   @media (max-width: $tablet-width) {
     min-height: 100px;
@@ -72,7 +71,6 @@
   @media (max-width: $mobile-width) {
     min-height: 110px;
   }
-
 }
 
 .about__button {

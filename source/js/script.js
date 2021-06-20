@@ -27,19 +27,35 @@
 //     pageHeader.classList.remove('header--open-menu');
 //   });
 // });
+
+/* Обрезка текста*/
+
+const textAbout = document.querySelector('.about__text-crop');
+const content = textAbout.textContent;
+const buttonCropText = document.querySelector('.about__button');
+
 const cropText = function() {
-  const cropElement = document.querySelectorAll('.about__text-crop');
+  const cropElements = document.querySelectorAll('.about__text-crop');
   const size = 200;
   const endCharacter = '..';
 
-  cropElement.forEach((el) => {
+  cropElements.forEach((el) => {
     let text = el.innerHTML;
-
     if (el.innerHTML.length > size) {
-      text = text.substr(0, size);
+      text = text.substring(0, size);
       el.innerHTML = text + endCharacter;
     }
   });
 };
 
-// cropText();
+cropText();
+
+buttonCropText.addEventListener('click', () => {
+  if (buttonCropText.classList.contains('text-cropped')) {
+    buttonCropText.classList.remove('text-cropped');
+    textAbout.textContent = content;
+  } else {
+    cropText();
+    buttonCropText.classList.add('text-cropped');
+  }
+});

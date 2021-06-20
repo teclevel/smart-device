@@ -405,8 +405,7 @@ img {
   margin: 0 0 30px 0; }
 
 .about__text-crop {
-  overflow: hidden;
-  min-height: 153px; }
+  min-height: 95px; }
   @media (max-width: 1023px) {
     .about__text-crop {
       min-height: 100px; } }
