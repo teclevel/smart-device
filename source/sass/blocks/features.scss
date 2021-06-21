@@ -1,5 +1,7 @@
 .features {
-  padding: 69px calc(50% - 730px) 110px;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 69px 20px 110px;
 
   @media (max-width: $tablet-width) {
     padding: 54px 25px 54px;
@@ -13,7 +15,7 @@
 .features__list {
   list-style: none;
   margin: 0;
-  padding: 0 25px;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
