@@ -254,6 +254,10 @@ img {
   border-radius: 5px;
   margin: 0 0 0 115px;
   padding: 15px 20px; }
+  .lead__button-consultation:hover {
+    opacity: 0.6; }
+  .lead__button-consultation:active {
+    opacity: 1; }
   @media (max-width: 1023px) {
     .lead__button-consultation {
       margin: 0 0 0 50px; } }
@@ -282,6 +286,10 @@ img {
   display: inline-block;
   width: 154px;
   transform-origin: 0 0; }
+  .lead__link-scroll:hover {
+    opacity: 0.7; }
+  .lead__link-scroll:active {
+    opacity: 1; }
   @media (max-width: 1023px) {
     .lead__link-scroll {
       display: none; } }
@@ -426,3 +434,81 @@ img {
   border-radius: 5px;
   padding: 15px 15px;
   width: 180px; }
+
+.offer {
+  max-width: 1431px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 10px 130px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  color: #ffffff; }
+  @media (max-width: 1023px) {
+    .offer {
+      padding: 30px 25px 70px; } }
+
+.offer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 46px; }
+  @media (max-width: 1023px) {
+    .offer__list {
+      grid-template-columns: 1fr; } }
+
+.offer__list a {
+  position: relative;
+  text-decoration: none;
+  color: inherit; }
+  .offer__list a:hover figure {
+    opacity: 0.5; }
+
+.offer h2 {
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 0 50px 0; }
+  @media (max-width: 1023px) {
+    .offer h2 {
+      font-size: 32px;
+      line-height: 45px; } }
+  @media (max-width: 767px) {
+    .offer h2 {
+      font-size: 28px;
+      line-height: 39px; } }
+
+.offer figure {
+  position: relative;
+  margin: 0; }
+  .offer figure::after {
+    position: absolute;
+    content: "";
+    text-align: center;
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat; }
+
+.offer figcaption {
+  font-size: 20px;
+  line-height: 30px;
+  position: absolute;
+  top: 50px;
+  left: 40px; }
+
+.offer img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  @media (max-width: 1023px) {
+    .offer img {
+      height: 256px; } }
+
+.offer img[src="./img/boards-production.png"] {
+  -o-object-position: 0 80%;
+     object-position: 0 80%; }
