@@ -5,7 +5,7 @@
   line-height: 22px;
   color: $white;
   background-image: url("../img/backgrounds/background-form.svg"),
-  url("../img/backgrounds/triangles-form.svg");
+    url("../img/backgrounds/triangles-form.svg");
   background-color: $blue;
   background-repeat: no-repeat;
   background-size: contain, contain;
@@ -57,13 +57,12 @@
 }
 
 .form__data {
-  padding: 0;
-  margin: 0;
   border: none;
   display: flex;
   flex-wrap: wrap;
   column-gap: 31px;
   row-gap: 40px;
+  padding: 0;
   margin: 0 0 43px 0;
 }
 
@@ -95,7 +94,6 @@
 }
 
 .form input[type="checkbox"]:checked + label {
-
   &::after {
     position: absolute;
     content: "";
