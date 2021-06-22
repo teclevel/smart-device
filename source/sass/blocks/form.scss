@@ -22,11 +22,11 @@
   padding: 50px 20px 50px;
 
   @media (max-width: $tablet-width) {
-    padding: 0 91px 0;
+    padding: 60px 91px 100px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0 15px 0;
+    padding: 50px 15px 50px;
   }
 }
 

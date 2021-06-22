@@ -24,6 +24,8 @@
 }
 
 .header__logo-desktop {
+  color: $white;
+
   @media (max-width: $mobile-width) {
     display: none;
   }
