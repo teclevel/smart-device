@@ -1,0 +1,7 @@
+.js .js__list-menu-closed,
+.js .js__list-contacts-closed {
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}

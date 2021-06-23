@@ -58,7 +58,7 @@
   }
 }
 
-.footer__items-contacts {
+.footer__nav {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +99,8 @@
   }
 }
 
-.footer__site-items {
+.footer__menu {
+  position: relative;
   width: 530px;
 
   @media (max-width: $tablet-width) {
@@ -108,10 +109,22 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+    }
   }
 }
 
-.footer__list {
+.footer__list-menu {
   font-weight: normal;
   font-size: 15px;
   line-height: 25px;
@@ -128,7 +141,7 @@
   }
 }
 
-.footer__list li {
+.footer__list-menu li {
   min-width: 300px;
 
   @media (max-width: $mobile-width) {
@@ -136,21 +149,71 @@
   }
 }
 
+.footer__list-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .footer__contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+    }
+  }
 }
 
 .footer__rights {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 50px 0 0 0;
 
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+    }
+  }
+
   @media (max-width: $mobile-width) {
-    align-self: center;
+    text-align: center;
     flex-direction: column;
+  }
+
+  .footer__menu-button,
+  .footer__contacts-button {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+}
+
+.footer__rights-desktop {
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }

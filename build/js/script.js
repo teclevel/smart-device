@@ -1,3 +1,39 @@
+/* Обрезка текста*/
+
+const textAbout = document.querySelector('.about__text-crop');
+const content = textAbout.textContent;
+const buttonCropText = document.querySelector('.about__button');
+
+const cropText = function() {
+  const cropElements = document.querySelectorAll('.about__text-crop');
+  const size = 200;
+  const endCharacter = '..';
+
+  cropElements.forEach((el) => {
+    let text = el.innerHTML;
+    if (el.innerHTML.length > size) {
+      text = text.substring(0, size);
+      el.innerHTML = text + endCharacter;
+    }
+  });
+};
+
+cropText();
+
+buttonCropText.addEventListener('click', () => {
+  if (buttonCropText.classList.contains('text-cropped')) {
+    buttonCropText.classList.remove('text-cropped');
+    textAbout.textContent = content;
+  } else {
+    cropText();
+    buttonCropText.classList.add('text-cropped');
+  }
+});
+
+
+const footerMenu = document.querySelector('.s');
+
+
 // // 'use strict';
 // // const pageHeader = document.querySelector('.header');
 // // const headerToggle = document.querySelector('.header__toggle-menu');
@@ -27,35 +63,3 @@
 // //     pageHeader.classList.remove('header--open-menu');
 // //   });
 // // });
-
-// /* Обрезка текста*/
-
-// const textAbout = document.querySelector('.about__text-crop');
-// const content = textAbout.textContent;
-// const buttonCropText = document.querySelector('.about__button');
-
-// const cropText = function() {
-//   const cropElements = document.querySelectorAll('.about__text-crop');
-//   const size = 200;
-//   const endCharacter = '..';
-
-//   cropElements.forEach((el) => {
-//     let text = el.innerHTML;
-//     if (el.innerHTML.length > size) {
-//       text = text.substring(0, size);
-//       el.innerHTML = text + endCharacter;
-//     }
-//   });
-// };
-
-// cropText();
-
-// buttonCropText.addEventListener('click', () => {
-//   if (buttonCropText.classList.contains('text-cropped')) {
-//     buttonCropText.classList.remove('text-cropped');
-//     textAbout.textContent = content;
-//   } else {
-//     cropText();
-//     buttonCropText.classList.add('text-cropped');
-//   }
-// });
