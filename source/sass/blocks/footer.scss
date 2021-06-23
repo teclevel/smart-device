@@ -66,6 +66,7 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -83,6 +84,7 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -102,6 +104,10 @@
 
   @media (max-width: $tablet-width) {
     width: 50%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }
 
@@ -124,6 +130,10 @@
 
 .footer__list li {
   min-width: 300px;
+
+  @media (max-width: $mobile-width) {
+    min-width: 270px;
+  }
 }
 
 

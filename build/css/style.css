@@ -169,9 +169,6 @@ img {
     .header__button-order {
       display: none; } }
 
-.main {
-  display: grid; }
-
 .main__background {
   background-image: url("../img/backgrounds/background-about.svg");
   background-repeat: no-repeat;
@@ -210,7 +207,8 @@ img {
   @media (max-width: 767px) {
     .lead__title {
       font-size: 40px;
-      line-height: 47px; } }
+      line-height: 47px;
+      max-width: 270px; } }
 
 .lead__description {
   position: relative;
@@ -578,7 +576,7 @@ img {
 .form input,
 .form textarea {
   background-color: rgba(255, 255, 255, 0.1);
-  flex-grow: 1;
+  width: 100%;
   border: none;
   padding: 14px; }
   .form input::-moz-placeholder, .form textarea::-moz-placeholder {
@@ -586,6 +584,9 @@ img {
   .form input::placeholder,
   .form textarea::placeholder {
     color: inherit; }
+
+.form input[class="visually-hidden"] {
+  width: 1px; }
 
 .form input[type="checkbox"] + label {
   position: relative;
@@ -614,6 +615,9 @@ img {
   margin: 0;
   border: none;
   display: flex; }
+  @media (max-width: 767px) {
+    .form__submit {
+      flex-direction: column; } }
 
 .form button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -626,9 +630,12 @@ img {
   background-color: inherit;
   border: 1px solid #ffffff;
   border-radius: 5px;
-  width: 270px;
+  width: 100%;
   padding: 14px;
   margin: 0 40px 0 0; }
+  @media (max-width: 767px) {
+    .form button {
+      margin: 0 0 20px 0; } }
 
 .footer {
   background-color: #ffffff;
@@ -686,7 +693,8 @@ img {
   justify-content: space-between; }
   @media (max-width: 767px) {
     .footer__items-contacts {
-      flex-direction: column; } }
+      flex-direction: column;
+      width: 100%; } }
 
 @media (max-width: 1023px) {
   .footer__logo-socials {
@@ -701,7 +709,8 @@ img {
 
 @media (max-width: 767px) {
   .footer__logo-socials {
-    flex-direction: column; } }
+    flex-direction: column;
+    width: 100%; } }
 
 .footer__logo {
   color: #203c42;
@@ -716,6 +725,9 @@ img {
   @media (max-width: 1023px) {
     .footer__site-items {
       width: 50%; } }
+  @media (max-width: 767px) {
+    .footer__site-items {
+      width: 100%; } }
 
 .footer__list {
   font-weight: normal;
@@ -734,6 +746,9 @@ img {
 
 .footer__list li {
   min-width: 300px; }
+  @media (max-width: 767px) {
+    .footer__list li {
+      min-width: 270px; } }
 
 .footer__contacts {
   display: flex;

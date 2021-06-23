@@ -69,13 +69,17 @@
 .form input,
 .form textarea {
   background-color: $white-opacity01;
-  flex-grow: 1;
+  width: 100%;
   border: none;
   padding: 14px;
 
   &::placeholder {
     color: inherit;
   }
+}
+
+.form input[class="visually-hidden"] {
+  width: 1px;
 }
 
 .form input[type="checkbox"] + label {
@@ -111,6 +115,10 @@
   margin: 0;
   border: none;
   display: flex;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .form button {
@@ -124,7 +132,11 @@
   background-color: inherit;
   border: 1px solid $white;
   border-radius: 5px;
-  width: 270px;
+  width: 100%;
   padding: 14px;
   margin: 0 40px 0 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px 0;
+  }
 }
