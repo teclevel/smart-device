@@ -102,8 +102,8 @@ const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 const buttonClose = popup.querySelector('.modal__button');
 const buttonOpenPopup = document.querySelector('.header__button-order');
 const buttonSubmit = popup.querySelector('button[type="submit"]');
-const form = popup.querySelector('.modal__form');
-const checkBox = popup.querySelector('#modal-check');
+// const form = popup.querySelector('.modal__form');
+// const checkBox = popup.querySelector('#modal-check');
 const html = document.querySelector('html');
 const marginSize = window.innerWidth - html.clientWidth;
 
