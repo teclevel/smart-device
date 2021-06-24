@@ -82,7 +82,7 @@
   width: 1px;
 }
 
-.form input[type="checkbox"] + label {
+.form input[type="checkbox"] +label {
   position: relative;
   padding: 0 0 0 30px;
 
@@ -97,7 +97,7 @@
   }
 }
 
-.form input[type="checkbox"]:checked + label {
+.form input[type="checkbox"]:checked +label {
   &::after {
     position: absolute;
     content: "";

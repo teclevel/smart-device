@@ -189,10 +189,10 @@
           </div>
           <p class="footer__tablet">1999-2018 SD Service Devices</p>
         </div>
-        <nav class="footer__nav"> <!-- js -->
+        <nav class="footer__nav">
           <div class="footer__menu">
             <h3 class="footer__title">Разделы сайта</h3>
-            <ul class="footer__list-menu"> <!-- js__list-menu-closed -->
+            <ul class="footer__list-menu">
               <li class="footer__item"><a href="#">О компании</a></li>
               <li class="footer__item"><a href="#"></a>Продукты</li>
               <li class="footer__item"><a href="#">Производство печатных плат</a></li>
@@ -201,18 +201,16 @@
               <li class="footer__item"><a href="#">Доставка</a></li>
               <li class="footer__item"><a href="#">Контакты</a></li>
             </ul>
-            <!-- button-menu--closed -->
             <button class="footer__menu-button button-menu" type="button" aria-label="открыть/закрыть меню"></button>
           </div>
           <div class="footer__contacts">
             <h3 class="footer__title">Наш офис</h3>
-            <ul class="footer__list-contacts"> <!-- js__list-menu-closed -->
+            <ul class="footer__list-contacts">
               <li>г. Мытищи, Олимпийский проспект, д.10</li>
               <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
               <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
               <li><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
             </ul>
-            <!-- button-menu--closed -->
             <button class="footer__contacts-button button-menu" type="button" aria-label="открыть/закрыть контакты"></button>
           </div>
         </nav>
@@ -223,22 +221,22 @@
           <p>Developed by wow studio</p>
         </div>
     </footer>
-
-    <!-- <div class="modal visually-hidden">
+    <section class="modal visually-hidden">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form action="https://echo.htmlacademy.ru" method="post"></form>
-        <input id="name" type="text" name="user-name" required placeholder="Имя">
-        <label class="visually-hidden" for="name"></label>
-        <input id="tel" type="tel" name="user-tel" required placeholder="Телефон"
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <input id="modal-name" type="text" name="user-name" required placeholder="Имя">
+        <label class="visually-hidden" for="modal-name"></label>
+        <input id="modal-tel" type="tel" name="user-tel" required placeholder="Телефон"
           pattern="+[0-9]{12}" minlength="10" maxlength="12">
-        <label class="visually-hidden" for="tel"></label>
-        <textarea name="text" id="text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
+        <label class="visually-hidden" for="modal-tel"></label>
+        <textarea name="text" id="modal-text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
         <button type="submit">Отправить</button>
-        <input type="checkbox" id="check" value="check" name="check">
-        <label for="check">Я согласен на обработку  персональных данных</label>
+        <input class="visually-hidden" type="checkbox" id="modal-check" value="check" name="check">
+        <label for="modal-check">Я согласен на обработку  персональных данных</label>
       </form>
-    </div>-->
+      <button class="modal__button" type="button" aria-label="закрыть окно"></button>
+    </section>
     <script src="./js/script.js"></script>
   </body>
 </html>

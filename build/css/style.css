@@ -836,3 +836,103 @@ img {
 @media (max-width: 767px) {
   .js .js__list-menu-closed {
     display: none; } }
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  background-color: #00b2ff;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  max-width: 490px;
+  height: 605px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 33px 39px 33px; }
+
+.modal h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px; }
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px; }
+
+.modal input,
+.modal textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border: none;
+  padding: 14px; }
+  .modal input::-moz-placeholder, .modal textarea::-moz-placeholder {
+    color: inherit; }
+  .modal input::placeholder,
+  .modal textarea::placeholder {
+    color: inherit; }
+
+.modal textarea {
+  height: 104px; }
+
+.modal input[type="checkbox"] + label {
+  position: relative;
+  padding: 0 0 0 30px;
+  cursor: pointer; }
+  .modal input[type="checkbox"] + label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: 0;
+    border: 1px solid #ffffff; }
+
+.modal input[type="checkbox"]:hover + label::before,
+.modal input[type="checkbox"]:focus + label::before {
+  border-color: #203c42; }
+
+.modal input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 4px;
+  background-image: url("../img/icons/check.svg");
+  background-repeat: no-repeat; }
+
+.modal button[type="submit"] {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 14px; }
+
+.modal__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  border: none; }
+  .modal__button:hover {
+    opacity: 0.6; }
+  .modal__button:active {
+    opacity: 1; }
