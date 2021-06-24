@@ -49,15 +49,8 @@ if (footerMenu) {
 
 
 const toggleMenu = (menu, button) => {
-  const menuOpen = menu.classList.contains('js__list-menu-closed');
-
-  if (!menuOpen) {
-    menu.classList.add ('js__list-menu-closed');
-    button.classList.add ('button-menu--closed');
-  } else {
-    menu.classList.remove ('js__list-menu-closed');
-    button.classList.remove ('button-menu--closed');
-  }
+  menu.classList.toggle ('js__list-menu-closed');
+  button.classList.toggle ('button-menu--closed');
 };
 
 if (!closedMenu) {
