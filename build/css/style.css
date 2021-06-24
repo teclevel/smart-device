@@ -834,6 +834,5 @@ img {
         background-image: url("../img/icons/plus.svg"); } }
 
 @media (max-width: 767px) {
-  .js .js__list-menu-closed,
-  .js .js__list-contacts-closed {
+  .js .js__list-menu-closed {
     display: none; } }

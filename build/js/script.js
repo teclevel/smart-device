@@ -31,7 +31,52 @@ buttonCropText.addEventListener('click', () => {
 });
 
 
-const footerMenu = document.querySelector('.s');
+/*Меню футера*/
+
+const footerMenu = document.querySelector('.footer__nav');
+const listMenu = footerMenu.querySelector ('.footer__list-menu');
+const buttonMenu = footerMenu.querySelector('.footer__menu-button');
+const listContacts = footerMenu.querySelector ('.footer__list-contacts');
+const buttonContacts = footerMenu.querySelector('.footer__contacts-button');
+
+const closedMenu = listMenu.classList.contains('js__list-menu-closed');
+const closedContacts = listContacts.classList.contains('js__list-menu-closed');
+
+
+if (footerMenu) {
+  footerMenu.classList.add('js');
+}
+
+
+const toggleMenu = (menu, button) => {
+  const menuOpen = menu.classList.contains('js__list-menu-closed');
+
+  if (!menuOpen) {
+    menu.classList.add ('js__list-menu-closed');
+    button.classList.add ('button-menu--closed');
+  } else {
+    menu.classList.remove ('js__list-menu-closed');
+    button.classList.remove ('button-menu--closed');
+  }
+};
+
+if (!closedMenu) {
+  toggleMenu(listMenu, buttonMenu);
+}
+
+buttonMenu.addEventListener('click', () => {
+  if (!closedContacts){
+    toggleMenu(listMenu, buttonMenu);
+    toggleMenu(listContacts, buttonContacts);
+  }
+});
+
+buttonContacts.addEventListener('click', () => {
+  if (!closedMenu){
+    toggleMenu(listContacts, buttonContacts);
+    toggleMenu(listMenu, buttonMenu);
+  }
+});
 
 
 // // 'use strict';
