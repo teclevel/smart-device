@@ -36,11 +36,12 @@
 }
 
 .header__contacts-list {
-  margin: 0 40px;
+  margin: 0 45px;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  column-gap: 33px;
 
   @media (max-width: $tablet-width) {
     margin: 0;
@@ -60,6 +61,7 @@
 .header__contacts-list a {
   position: relative;
   text-decoration: none;
+  font-family: $font-family--description;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -99,6 +101,7 @@
   border-radius: 5px;
   padding: 0 20px;
   align-self: center;
+  padding: 0 29px 0 24px;
 
   &:hover,
   &:focus {

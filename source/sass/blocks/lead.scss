@@ -1,7 +1,8 @@
 .lead {
-  max-width: 1431px;
+  max-width: 1435px;
   width: 100%;
-  padding: 100px 10px 170px;
+  min-height: 791px;
+  padding: 174px 10px 170px;
   margin: 0 auto;
   color: $white;
 
@@ -26,6 +27,8 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   max-width: 817px;
+  margin: 54px 0 28px 0;
+
 
   @media (max-width: $tablet-width) {
     font-size: 60px;
@@ -46,8 +49,9 @@
   font-weight: normal;
   font-size: 22px;
   line-height: 34px;
-  padding: 0 0 0 115px;
-  max-width: 800px;
+  padding: 0 0 0 95px;
+  margin: 0 0 44px 0;
+  max-width: 790px;
 
   &::before {
     position: absolute;
@@ -91,8 +95,9 @@
   text-transform: uppercase;
   background-color: $blue;
   border-radius: 5px;
-  margin: 0 0 0 115px;
-  padding: 15px 20px;
+  margin: 0 0 0 95px;
+  padding: 18px 20px;
+  width: 407px;
 
   &:hover {
     opacity: 0.6;
@@ -132,7 +137,7 @@
   line-height: 16px;
   opacity: 0.5;
   transform: rotate(-90deg) translate(-100px, 0);
-  margin: 123px 0 0 0;
+  margin: 88px 0 0 0;
   display: inline-block;
   width: 154px;
   transform-origin: 0 0;
