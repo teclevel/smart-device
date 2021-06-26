@@ -130,6 +130,13 @@
   }
 }
 
+.form input[type="checkbox"]:hover + label,
+.form input[type="checkbox"]:focus + label {
+  &::before {
+    border-color: $black;
+  }
+}
+
 .form__submit {
   padding: 0;
   margin: 0;
@@ -156,6 +163,14 @@
   border-radius: 5px;
   min-width: 270px;
   padding: 15px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 
   @media (max-width: $mobile-width) {
     margin: 0 0 20px 0;

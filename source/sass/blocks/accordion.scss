@@ -1,0 +1,32 @@
+.accordion__toggler {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    background-image: url("../img/icons/plus.svg");
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+
+.accordion__menu {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.accordion__item.accordion__item--opened {
+  .accordion__menu {
+    display: flex;
+  }
+
+  .accordion__toggler {
+    background-image: url("../img/icons/minus.svg");
+  }
+}

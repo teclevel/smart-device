@@ -37,6 +37,14 @@
 .footer a {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .footer__title {
@@ -96,8 +104,8 @@
   }
 }
 
-.footer__logo {
-  color: $black;
+.footer__link-logo {
+  display: block;
   margin: 0 0 50px 0;
 }
 
@@ -216,16 +224,16 @@
     text-align: center;
     flex-direction: column;
   }
+}
 
-  .footer__menu-button,
-  .footer__contacts-button {
-    display: none;
+.footer__menu-button {
+  display: none;
 
-    @media (max-width: $mobile-width) {
-      display: block;
-    }
+  @media (max-width: $mobile-width) {
+    display: block;
   }
 }
+
 
 .footer__rights-desktop,
 .footer__service {

@@ -4,7 +4,7 @@ const textAbout = document.querySelector('.about__text-crop');
 const content = textAbout.textContent;
 const buttonCropText = document.querySelector('.about__button');
 
-function cropText () {
+function cropText() {
   const cropElements = document.querySelectorAll('.about__text-crop');
   const size = 200;
   const endCharacter = '..';
@@ -31,44 +31,37 @@ buttonCropText.addEventListener('click', () => {
 });
 
 
-/*Меню футера*/
-
-const footerMenu = document.querySelector('.footer__nav');
-const listMenu = footerMenu.querySelector ('.footer__list-menu');
-const buttonMenu = footerMenu.querySelector('.footer__menu-button');
-const listContacts = footerMenu.querySelector ('.footer__list-contacts');
-const buttonContacts = footerMenu.querySelector('.footer__contacts-button');
-
-const closedMenu = listMenu.classList.contains('js__list-menu-closed');
-const closedContacts = listContacts.classList.contains('js__list-menu-closed');
+/*аккордеон*/
 
 
-if (footerMenu) {
-  footerMenu.classList.add('js');
+const accordion = document.querySelector('.accordion');
+const togglerClass = 'accordion__toggler';
+const itemClass = 'accordion__item';
+const itemOpenedClass = 'accordion__item--opened';
+
+function closeAccordionItems() {
+  accordion
+    .querySelectorAll(`.${itemClass}`)
+    .forEach((element) => {
+      element.classList.remove(itemOpenedClass);
+    });
 }
 
+closeAccordionItems();
 
-function toggleMenu (menu, button) {
-  menu.classList.toggle ('js__list-menu-closed');
-  button.classList.toggle ('button-menu--closed');
-}
+accordion.addEventListener('click', (event) => {
+  const toggler = event.target.closest(`.${togglerClass}`);
 
-if (!closedMenu) {
-  toggleMenu(listMenu, buttonMenu);
-}
+  if (!toggler) { return; }
 
-buttonMenu.addEventListener('click', () => {
-  if (!closedContacts){
-    toggleMenu(listMenu, buttonMenu);
-    toggleMenu(listContacts, buttonContacts);
-  }
-});
+  const item = toggler.closest(`.${itemClass}`);
+  const isOpened = item.classList.contains(itemOpenedClass);
 
-buttonContacts.addEventListener('click', () => {
-  if (!closedMenu){
-    toggleMenu(listContacts, buttonContacts);
-    toggleMenu(listMenu, buttonMenu);
-  }
+  closeAccordionItems();
+
+  isOpened
+    ? item.classList.remove(itemOpenedClass)
+    : item.classList.add(itemOpenedClass);
 });
 
 
@@ -85,11 +78,11 @@ overlay.style.zIndex = '0';
 overlay.style.backgroundColor = 'black';
 overlay.style.opacity = '.5';
 
-function showOverlay () {
+function showOverlay() {
   document.body.append(overlay);
 }
 
-function closeOverlay () {
+function closeOverlay() {
   overlay.remove();
 }
 
@@ -99,7 +92,7 @@ function closeOverlay () {
 const popup = document.querySelector('.modal');
 const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
-const buttonClose = popup.querySelector('.modal__button');
+const buttonClose = popup.querySelector('.modal__button-close');
 const buttonOpenPopup = document.querySelector('.header__button-order');
 const buttonSubmit = popup.querySelector('button[type="submit"]');
 // const form = popup.querySelector('.modal__form');
@@ -118,7 +111,7 @@ buttonSubmit.addEventListener('click', (event) => {
 
 });
 
-function onModalOpen (evt) {
+function onModalOpen(evt) {
   evt.preventDefault();
   popup.classList.remove('visually-hidden');
   document.querySelector('body').style.overflow = 'hidden';
@@ -132,13 +125,13 @@ function onModalOpen (evt) {
   elementsPopup[0].focus();
 }
 
-function onModalButtonClose (evt) {
-  if (evt.code === 'Enter'|| evt.code === 'Space') {
+function onModalButtonClose(evt) {
+  if (evt.code === 'Enter' || evt.code === 'Space') {
     onModalClose();
   }
 }
 
-function onModalClose () {
+function onModalClose() {
   popup.classList.add('visually-hidden');
   document.querySelector('body').style.overflow = '';
   closeOverlay();
@@ -146,7 +139,7 @@ function onModalClose () {
   html.style.marginRight = '';
 }
 
-function onModalKeydown (evt) {
+function onModalKeydown(evt) {
   const focusedItemIndex = elementsPopup.indexOf(document.activeElement);
 
   if (evt.shiftKey && (focusedItemIndex === 0 || focusedItemIndex === -1)) {

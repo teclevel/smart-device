@@ -95,9 +95,17 @@
   border-radius: 5px;
   width: 100%;
   padding: 14px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
-.modal__button {
+.modal__button-close {
   position: absolute;
   top: 20px;
   right: 20px;
