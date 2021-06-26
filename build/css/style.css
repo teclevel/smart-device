@@ -70,22 +70,23 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-image: url("../img/backgrounds/pattern.png"), url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
-  background-color: #1b2d37;
-  background-repeat: no-repeat;
-  background-size: cover, auto, auto;
-  background-position: center, 90% 50%, 90% 50%; }
+  background-color: #1b2d37; }
 
 .page-body .main {
   flex-grow: 1; }
 
 .header {
+  position: absolute;
   max-width: 1431px;
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   padding: 33px 10px 0 10px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background-color: transparent; }
   @media (max-width: 1023px) {
     .header {
       padding: 20px 25px; } }
@@ -173,24 +174,34 @@ img {
     .header__button-order {
       display: none; } }
 
-.main__background {
+.main__features-background {
   background-image: url("../img/backgrounds/background-about.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffffff; }
 
 .lead {
-  max-width: 1435px;
+  background-image: url("../img/backgrounds/pattern.png");
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover; }
+
+.lead__center {
+  max-width: 1566px;
   width: 100%;
   min-height: 791px;
-  padding: 174px 10px 170px;
+  padding: 263px 76px 170px;
   margin: 0 auto;
-  color: #ffffff; }
+  color: #ffffff;
+  background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 71%, 50% 50%;
+  background-size: auto, auto; }
   @media (max-width: 1023px) {
-    .lead {
+    .lead__center {
       padding: 100px 91px 170px; } }
   @media (max-width: 767px) {
-    .lead {
+    .lead__center {
       padding: 100px 17px 170px; } }
 
 .lead a {
@@ -534,21 +545,21 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #ffffff;
-  min-height: 666px;
-  background-image: url("../img/backgrounds/background-form.svg");
   background-color: #00b2ff;
-  background-repeat: no-repeat;
-  background-size: 1821px;
-  background-position: 0 -65px; }
+  color: #ffffff;
+  min-height: 666px; }
   @media (max-width: 1023px) {
     .form {
       background-image: none; } }
 
 .form__center {
-  max-width: 1210px;
+  max-width: 1566px;
   margin: 0 auto;
-  padding: 59px 20px 50px; }
+  padding: 59px 193px 50px;
+  background-image: url("../img/backgrounds/background-form.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0 40%; }
   @media (max-width: 1023px) {
     .form__center {
       padding: 60px 91px 100px; } }

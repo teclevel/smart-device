@@ -3,16 +3,9 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  background-color: $blue;
   color: $white;
   min-height: 666px;
-  background-image: url("../img/backgrounds/background-form.svg");
-  background-color: $blue;
-  background-repeat: no-repeat;
-  // background-size: 100%;
-  // background-position: 020% 50%;
-
-  background-size: 1821px;
-  background-position: 0 -65px;
 
   @media (max-width: $tablet-width) {
     background-image: none;
@@ -20,9 +13,13 @@
 }
 
 .form__center {
-  max-width: 1210px;
+  max-width: 1566px;
   margin: 0 auto;
-  padding: 59px 20px 50px;
+  padding: 59px 193px 50px;
+  background-image: url("../img/backgrounds/background-form.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0 40%;
 
   @media (max-width: $tablet-width) {
     padding: 60px 91px 100px;
