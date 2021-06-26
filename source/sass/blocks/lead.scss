@@ -1,9 +1,8 @@
 .lead {
-  background-image:
-    url("../img/backgrounds/pattern.png");
-    background-repeat: no-repeat;
-    background-position: 0;
-    background-size: cover;
+  background-image: url("../img/backgrounds/pattern.png");
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
 }
 
 .lead__center {
@@ -14,8 +13,8 @@
   margin: 0 auto;
   color: $white;
   background-image:
-  url("../img/backgrounds/boards.png"),
-  url("../img/backgrounds/poligons-header.svg");
+    url("../img/backgrounds/boards.png"),
+    url("../img/backgrounds/poligons-header.svg");
   background-repeat: no-repeat;
   background-position: 100% 71%, 50% 50%;
   background-size: auto, auto;

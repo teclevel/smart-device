@@ -1,14 +1,25 @@
 .footer {
+  position: relative;
   background-color: $white;
   color: $dark-05;
   font-family: $font-family--description;
+  min-height: 317px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 50px;
+    background-color: $grey-line;
+  }
 }
 
 .footer__center {
   max-width: 1455px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 50px 20px 0;
   display: flex;
   flex-wrap: wrap;
 
@@ -38,12 +49,6 @@
   text-transform: uppercase;
 }
 
-.footer p {
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 25px;
-}
-
 .footer__tablet {
   display: none;
 
@@ -71,6 +76,9 @@
 }
 
 .footer__logo-socials {
+  padding: 16px 8px;
+  margin: 0 207px 0 0;
+
   @media (max-width: $tablet-width) {
     flex-grow: 1;
     display: flex;
@@ -130,11 +138,12 @@
   line-height: 25px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px 0 0 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100px;
+  height: 112px;
+
 
   @media (max-width: $tablet-width) {
     height: 100%;
@@ -149,16 +158,8 @@
   }
 }
 
-.footer__list-contacts {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .footer__contacts {
   position: relative;
-  display: flex;
-  flex-direction: column;
 
   @media (max-width: $mobile-width) {
     &::before {
@@ -175,13 +176,27 @@
   }
 }
 
+.footer__list-contacts {
+
+  font-size: 15px;
+  line-height: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 14px 0 0 0;
+}
+
 .footer__rights {
+  font-weight: normal;
+  align-items: center;
+  letter-spacing: 0.04em;
+  font-size: 13px;
+  line-height: 24px;
   position: relative;
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 50px 0 0 0;
+  padding: 45px 0 0 0;
+  text-transform: uppercase;
 
   &::before {
     @media (max-width: $mobile-width) {
@@ -212,8 +227,21 @@
   }
 }
 
-.footer__rights-desktop {
+.footer__rights-desktop,
+.footer__service {
   @media (max-width: $tablet-width) {
     display: none;
   }
+}
+
+.footer__rights-desktop {
+  margin: 0 73px 0 0;
+}
+
+.footer__rights-service {
+  margin: 0 143px 0 0;
+}
+
+.footer__rights-confidentiality {
+  margin: 0 auto 0 0;
 }
