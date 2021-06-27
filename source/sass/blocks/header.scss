@@ -61,6 +61,8 @@
 
   @media (max-width: $tablet-width) {
     min-width: 50px;
+    padding: 0;
+    min-width: 0;
   }
 }
 
@@ -90,6 +92,20 @@
 .header__tel {
   @media (max-width: $tablet-width) {
     display: none;
+  }
+}
+
+.header__logo-letter {
+  @media (max-width: $tablet-width) {
+    width: 25px;
+    height: 19px;
+  }
+}
+
+.header__logo-phone-call {
+  @media (max-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
   }
 }
 

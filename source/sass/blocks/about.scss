@@ -6,6 +6,14 @@
   margin: 0 auto;
   padding: 0 20px 110px 200px;
 
+  @media (max-width: $tablet-width) {
+    padding: 0 25px 82px 212px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 14px 65px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -18,6 +26,7 @@
     background-size: contain;
 
     @media (max-width: $tablet-width) {
+      top: 0;
       width: 251px;
       height: 362px;
     }
@@ -25,14 +34,6 @@
     @media (max-width: $mobile-width) {
       content: none;
     }
-  }
-
-  @media (max-width: $tablet-width) {
-    padding: 0 25px 96px 200px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding: 0 14px 65px;
   }
 }
 

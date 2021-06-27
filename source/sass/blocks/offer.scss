@@ -8,7 +8,7 @@
   color: $white;
 
   @media (max-width: $tablet-width) {
-    padding: 30px 25px 70px;
+    padding: 50px 25px 77px;
   }
 
   @media (max-width: $mobile-width) {
@@ -50,6 +50,7 @@
   @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 45px;
+    max-width: 630px;
   }
 
   @media (max-width: $mobile-width) {
