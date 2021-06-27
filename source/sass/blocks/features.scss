@@ -4,11 +4,11 @@
   padding: 113px 20px 78px;
 
   @media (max-width: $tablet-width) {
-    padding: 54px 25px 54px;
+    padding: 54px 25px 29px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 21px 14px 60px;
+    padding: 37px 14px 12px;
   }
 }
 
@@ -24,7 +24,7 @@
   @media (max-width: $mobile-width) {
     padding: 0;
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 20px;
   }
 }
 
@@ -36,6 +36,16 @@
   background-color: $white;
   cursor: pointer;
   min-height: 298px;
+
+  @media (max-width: $tablet-width) {
+    padding: 24px 22px 10px 24px;
+    min-height: 234px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 24px 15px 18px 26px;
+    min-height: 232px;
+  }
 
   &::before {
     position: absolute;
@@ -66,9 +76,14 @@
   color: $blue;
   margin: 14px 0;
 
+  @media (max-width: $tablet-width) {
+    margin: 0;
+  }
+
   @media (max-width: $mobile-width) {
     font-size: 20px;
-    line-height: 140.62%;
+    line-height: 28px;
+    margin: 9px 0 0 0;
   }
 }
 
@@ -77,9 +92,13 @@
   font-size: 16px;
   line-height: 22px;
   color: $grey-text;
-  // margin: 16px 0 25px ;
+
+  @media (max-width: $tablet-width) {
+    margin: 10px 0;
+  }
 
   @media (max-width: $mobile-width) {
     line-height: 21.5px;
+    font-weight: normal;
   }
 }

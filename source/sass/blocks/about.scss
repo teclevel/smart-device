@@ -51,6 +51,8 @@
 
   @media (max-width: $mobile-width) {
     font-size: 28px;
+    margin: 26px 0 0 0;
+
   }
 }
 
@@ -72,6 +74,7 @@
 
   @media (max-width: $mobile-width) {
     min-height: 110px;
+    margin: 36px 0 0 0;
   }
 }
 

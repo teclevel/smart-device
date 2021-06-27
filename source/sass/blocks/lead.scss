@@ -21,11 +21,18 @@
 
 
   @media (max-width: $tablet-width) {
-    padding: 100px 91px 170px;
+    min-height: 688px;
+    background-repeat: no-repeat;
+    background-position: 158% 32%,49% -119px;
+    background-size: 58%,191%;
+    padding: 136px 91px 157px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 100px 17px 170px;
+    min-height: 645px;
+    padding: 232px 17px 70px;
+    background-position: 100% 21%,55% -130px;
+    background-size: 98%,449%;
   }
 }
 
@@ -64,8 +71,23 @@
   font-size: 22px;
   line-height: 34px;
   padding: 0 0 0 95px;
-  margin: 0 0 44px 0;
+  margin: 0 0 42px 0;
   max-width: 790px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 156.8%;
+    max-width: 470px;
+    padding: 0 0 0 50px;
+    margin: 0 0 55px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    padding: 0 0 0 48px;
+    margin: 0 0 43px 0;
+
+  }
 
   &::before {
     position: absolute;
@@ -82,21 +104,10 @@
     }
 
     @media (max-width: $mobile-width) {
-      top: 9px;
+      top: 13px;
     }
   }
 
-  @media (max-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 156.8%;
-    max-width: 470px;
-    padding: 0 0 0 50px;
-  }
-
-  @media (max-width: $mobile-width) {
-    font-size: 16px;
-    // max-width: 245px;
-  }
 }
 
 .lead__button-consultation {
@@ -123,9 +134,11 @@
 
   @media (max-width: $tablet-width) {
     margin: 0 0 0 50px;
+    width: 380px;
   }
 
   @media (max-width: $mobile-width) {
+    width: 287px;
     margin: 0;
   }
 }

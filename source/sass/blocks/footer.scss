@@ -5,6 +5,23 @@
   font-family: $font-family--description;
   min-height: 317px;
 
+
+  &::before {
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 95px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
+
+    @media (max-width: $mobile-width) {
+      position: static;
+    }
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -17,17 +34,9 @@
     @media (max-width: $tablet-width) {
       bottom: 74px;
     }
-  }
 
-  &::before {
-    @media (max-width: $tablet-width) {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      top: 95px;
-      background-color: $grey-line;
-      opacity: 0.2;
+    @media (max-width: $mobile-width) {
+      position: static;
     }
   }
 }
@@ -74,6 +83,11 @@
   letter-spacing: 0.05em;
   color: $dark;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    // margin: 0;
+    margin: 30px 0;
+  }
 }
 
 .footer__tablet {
@@ -99,22 +113,21 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
   column-gap: 20px;
 
   @media (max-width: $tablet-width) {
-  // justify-content: space-between;    !!!!!!!
-
     padding: 46px 0 0 0;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
     width: 100%;
+    padding: 0;
   }
 }
 
 .footer__logo-socials {
+  position: relative;
   padding: 16px 8px;
   margin: 0 207px 0 0;
 
@@ -130,7 +143,24 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
+    row-gap: 12px;
     width: 100%;
+    padding: 0 0 50px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      content: "";
+      width: calc(100% + 30px);
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: 0 0 0 -15px;
+      background-color: $grey-line;
+      opacity: 0.2;
+    }
   }
 }
 
@@ -160,17 +190,34 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+  }
 
-    &::before {
+  // &::before {
+  //   @media (max-width: $mobile-width) {
+  //     position: absolute;
+  //     content: "";
+  //     width: calc(100% + 30px);
+  //     height: 1px;
+  //     top: -15px;
+  //     right: 0;
+  //     left: 0;
+  //     margin: 0 0 0 -15px;
+  //     background-color: $grey-line;
+  //   }
+  // }
+
+  &::after {
+    @media (max-width: $mobile-width) {
       position: absolute;
       content: "";
       width: calc(100% + 30px);
       height: 1px;
-      top: 0;
+      bottom: 2px;
       right: 0;
       left: 0;
       margin: 0 0 0 -15px;
       background-color: $grey-line;
+      opacity: 0.2;
     }
   }
 }
@@ -187,15 +234,16 @@
   flex-wrap: wrap;
   height: 112px;
 
-
   @media (max-width: $tablet-width) {
     height: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 25px 0;
   }
 }
 
 .footer__item {
-  // min-width: 300px;
-
   @media (max-width: $mobile-width) {
     min-width: 270px;
   }
@@ -203,18 +251,24 @@
 
 .footer__contacts {
   position: relative;
+  // margin: 0 0 0 auto;
 
   @media (max-width: $mobile-width) {
-    &::before {
+    padding: 0 5px 0 0;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width) {
       position: absolute;
       content: "";
       width: calc(100% + 30px);
       height: 1px;
-      top: 0;
+      bottom: 0;
       right: 0;
       left: 0;
       margin: 0 0 0 -15px;
       background-color: $grey-line;
+      opacity: 0.2;
     }
   }
 }
@@ -225,6 +279,11 @@
   list-style: none;
   margin: 0;
   padding: 14px 0 0 0;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 25px 0;
+  }
 }
 
 .footer__socials {
@@ -245,26 +304,13 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 45px 0 0 0;
+  padding: 45px 0 0;
   text-transform: uppercase;
-
-  &::before {
-    @media (max-width: $mobile-width) {
-      position: absolute;
-      content: "";
-      width: calc(100% + 30px);
-      height: 1px;
-      top: 0;
-      right: 0;
-      left: 0;
-      margin: 0 0 0 -15px;
-      background-color: $grey-line;
-    }
-  }
 
   @media (max-width: $mobile-width) {
     text-align: center;
     flex-direction: column;
+    padding: 29px 0 0;
   }
 }
 
@@ -298,4 +344,8 @@
 
 .footer__rights-confidentiality {
   margin: 0 auto 0 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 8px;
+  }
 }
