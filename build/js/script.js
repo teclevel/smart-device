@@ -94,22 +94,34 @@ const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
 const buttonClose = popup.querySelector('.modal__button-close');
 const buttonOpenPopup = document.querySelector('.header__button-order');
-const buttonSubmit = popup.querySelector('button[type="submit"]');
-// const form = popup.querySelector('.modal__form');
-// const checkBox = popup.querySelector('#modal-check');
+// const buttonSubmit = popup.querySelector('button[type="submit"]');
+const form = popup.querySelector('.modal__form');
+const checkBox = popup.querySelector('#modal-check');
 const html = document.querySelector('html');
 const marginSize = window.innerWidth - html.clientWidth;
 
 buttonOpenPopup.addEventListener('click', onModalOpen);
 buttonClose.addEventListener('click', onModalClose);
 buttonClose.addEventListener('keydown', onModalButtonClose);
-buttonSubmit.addEventListener('click', (event) => {
+
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-  // if (checkBox.checked && ) {
-  //   form.submit();
-  // }
+  if (checkBox.checked) {
+    form.submit();
+    new FormData(event.target);
+  }
 
 });
+
+/* adForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    sendData(                                                       //  sendData(onSuccess, onFail, body)
+      () => onSuccess(),
+      () => openPopupError(),
+      new FormData(evt.target),
+    );
+  }); */
 
 function onModalOpen(evt) {
   evt.preventDefault();
@@ -156,3 +168,34 @@ function onModalKeydown(evt) {
     onModalClose();
   }
 }
+
+
+/* поле ввода телефона*/
+
+const inputTel = document.querySelectorAll('[type="tel"]');
+
+inputTel.forEach((element) => {
+
+  element.addEventListener('focus', () => {
+    const prefixTel = '+7(';
+    if (!/^\+\d*$/.test(element.value)) {
+      element.value = prefixTel;
+    }
+
+  });
+
+  element.addEventListener('keypress', (event) => {
+
+    if (!/\d/.test(event.key)) {
+      event.preventDefault();
+    }
+  });
+
+  element.addEventListener('input', () => {
+
+    if (element.value.length === 6) {
+      element.value = `${element.value})`;
+    }
+  });
+
+});

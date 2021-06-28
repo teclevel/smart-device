@@ -145,12 +145,11 @@
           <div class="form__wrapper">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p class="form__description">Мы проконсультируем Вас бесплатно</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form  method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru">
               <fieldset class="form__data">
                 <input id="name" type="text" name="user-name" required placeholder="Имя">
                 <label class="visually-hidden" for="name"></label>
-                <input id="tel" type="tel" name="user-tel" required placeholder="Телефон"
-                  pattern="+[0-9]{12}" minlength="10" maxlength="12">
+                <input id="tel" type="tel" name="user-tel" required placeholder="Телефон" minlength="14" maxlength="14">
                 <label class="visually-hidden" for="tel"></label>
                 <textarea name="text" id="text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
               </fieldset>
@@ -227,11 +226,10 @@
     <section class="modal visually-hidden">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="modal__form" method="post" enctype="multipart/form-data">
         <input id="modal-name" type="text" name="user-name" required placeholder="Имя">
         <label class="visually-hidden" for="modal-name"></label>
-        <input id="modal-tel" type="tel" name="user-tel" required placeholder="Телефон"
-          pattern="+[0-9]{12}" minlength="10" maxlength="12">
+        <input id="modal-tel" type="tel" name="user-tel" required placeholder="Телефон" minlength="14" maxlength="14">
         <label class="visually-hidden" for="modal-tel"></label>
         <textarea name="text" id="modal-text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
         <button type="submit">Отправить</button>
