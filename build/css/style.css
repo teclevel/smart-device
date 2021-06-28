@@ -216,15 +216,15 @@ body {
     .lead__center {
       min-height: 688px;
       background-repeat: no-repeat;
-      background-position: 158% 32%,49% -119px;
-      background-size: 58%,191%;
+      background-position: 158% 32%, 49% -119px;
+      background-size: 58%, 191%;
       padding: 136px 91px 157px; } }
   @media (max-width: 767px) {
     .lead__center {
       min-height: 645px;
       padding: 232px 17px 70px;
-      background-position: 100% 21%,55% -130px;
-      background-size: 98%,449%; } }
+      background-position: 100% 21%, 55% -130px;
+      background-size: 98%, 449%; } }
 
 .lead a {
   color: inherit;
@@ -306,10 +306,10 @@ body {
   @media (max-width: 1023px) {
     .lead__button-consultation {
       margin: 0 0 0 50px;
-      width: 380px; } }
+      max-width: 380px; } }
   @media (max-width: 767px) {
     .lead__button-consultation {
-      width: 287px;
+      width: 100%;
       margin: 0; } }
 
 @media (max-width: 767px) {
@@ -777,7 +777,7 @@ body {
   padding: 15px; }
   @media (max-width: 1023px) {
     .form button {
-      min-width: 282px; } }
+      width: 100%; } }
   @media (max-width: 767px) {
     .form button {
       margin: 0 0 30px 0; } }

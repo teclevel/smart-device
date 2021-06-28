@@ -87,6 +87,22 @@ function closeOverlay() {
 }
 
 
+/* Отправка формы */
+
+const form = document.querySelectorAll('form');
+
+form.forEach((element) => {
+  element.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const checkBox = element.querySelector('[type="checkbox"]');
+
+    if (checkBox.checked) {
+      element.submit();
+    }
+  });
+});
+
+
 /* Попап */
 
 const popup = document.querySelector('.modal');
@@ -94,9 +110,7 @@ const elementsPopup = Array.from(popup.querySelectorAll('input, button'));
 
 const buttonClose = popup.querySelector('.modal__button-close');
 const buttonOpenPopup = document.querySelector('.header__button-order');
-// const buttonSubmit = popup.querySelector('button[type="submit"]');
-const form = popup.querySelector('.modal__form');
-const checkBox = popup.querySelector('#modal-check');
+
 const html = document.querySelector('html');
 const marginSize = window.innerWidth - html.clientWidth;
 
@@ -104,24 +118,6 @@ buttonOpenPopup.addEventListener('click', onModalOpen);
 buttonClose.addEventListener('click', onModalClose);
 buttonClose.addEventListener('keydown', onModalButtonClose);
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (checkBox.checked) {
-    form.submit();
-    // new FormData(event.target);
-  }
-
-});
-
-/* adForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-
-    sendData(                                                       //  sendData(onSuccess, onFail, body)
-      () => onSuccess(),
-      () => openPopupError(),
-      new FormData(evt.target),
-    );
-  }); */
 
 function onModalOpen(evt) {
   evt.preventDefault();
@@ -170,7 +166,7 @@ function onModalKeydown(evt) {
 }
 
 
-/* поле ввода телефона*/
+/* поле ввода номера телефона*/
 
 const inputTel = document.querySelectorAll('[type="tel"]');
 
