@@ -38,7 +38,7 @@
   text-decoration: none;
 }
 
-.lead__title {
+.lead h1 {
   font-weight: bold;
   font-size: 80px;
   line-height: 94px;
@@ -60,7 +60,7 @@
   }
 }
 
-.lead__description {
+.lead p {
   position: relative;
   font-family: $font-family--description;
   font-weight: normal;
@@ -109,7 +109,8 @@
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
-  display: inline-block;
+  display: block;
+
   text-align: center;
   text-transform: uppercase;
   background-color: $blue;
@@ -119,11 +120,11 @@
   width: 407px;
 
   &:hover {
-    opacity: 0.6;
+    transform: scale(1.05);
   }
 
   &:active {
-    opacity: 1;
+    transform: scale(1);
   }
 
   @media (max-width: $tablet-width) {
@@ -147,7 +148,7 @@
   display: none;
 
   @media (max-width: $mobile-width) {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -159,7 +160,7 @@
   opacity: 0.5;
   transform: rotate(-90deg) translate(-100px, 0);
   margin: 88px 0 0 0;
-  display: inline-block;
+  display: block;
   width: 154px;
   transform-origin: 0 0;
 

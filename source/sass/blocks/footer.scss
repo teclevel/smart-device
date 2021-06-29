@@ -74,7 +74,7 @@
   }
 }
 
-.footer__title {
+.footer h3 {
   font-family: $font-family--title;
   font-weight: normal;
   font-size: 15px;
@@ -230,7 +230,7 @@
   }
 }
 
-.footer__item {
+.footer__list-menu li {
   @media (max-width: $mobile-width) {
     min-width: 270px;
   }

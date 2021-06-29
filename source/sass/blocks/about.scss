@@ -92,10 +92,10 @@
   width: 180px;
 
   &:hover {
-    opacity: 0.6;
+    transform: scale(1.05);
   }
 
   &:active {
-    opacity: 1;
+    transform: scale(1);
   }
 }

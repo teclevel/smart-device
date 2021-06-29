@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./fonts/robotocondensedbold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" as="style" href="./css/style.min.css" />
-  <link rel="preload" as="script" href="./js/script.js" />
+  <link rel="preload" as="script" href="./js/main.js" />
 </head>
 
 <body class="page-body">
 
-  <include class="page-body_sprite" src="build/img/sprite_auto.svg"></include>
+  <div style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
 
   <header class="header">
     <a>
@@ -51,8 +53,8 @@
   <main class="main">
     <section class="lead">
       <div class="lead__center">
-        <h1 class="lead__title">Печатные платы</h1>
-        <p class="lead__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <h1>Печатные платы</h1>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="lead__button-consultation" href="#form">
           <span class="lead__button-text-desktop">Получить бесплатную консультацию</span>
           <span class="lead__button-text-mobile">Бесплатная консультация</span>
@@ -69,16 +71,16 @@
             <svg width="29" height="35">
               <use href="#stopwatch"></use>
             </svg>
-            <h3 class="features__card-title">Оперативные сроки</h3>
-            <p class="features__card-description">Усовершенствованная логистическая система позволяет нам просчитывать
+            <h3>Оперативные сроки</h3>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать
               стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
           <li>
             <svg width="35" height="35">
               <use href="#hired"></use>
             </svg>
-            <h3 class="features__card-title">Крупные поставщики</h3>
-            <p class="features__card-description">Нашими поставщиками являются такие крупные мировые компании как:
+            <h3>Крупные поставщики</h3>
+            <p>Нашими поставщиками являются такие крупные мировые компании как:
               OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей
               продукции.</p>
           </li>
@@ -86,15 +88,15 @@
             <svg width="36" height="31">
               <use href="#detective"></use>
             </svg>
-            <h3 class="features__card-title">Полная конфиденциальность</h3>
-            <p class="features__card-description">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
           </li>
           <li>
             <svg width="35" height="35">
               <use href="#tag"></use>
             </svg>
-            <h3 class="features__card-title">Персонализация стоимости</h3>
-            <p class="features__card-description">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+            <h3>Персонализация стоимости</h3>
+            <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
               установить ту цену, которая Вас устраивает.</p>
           </li>
         </ul>
@@ -120,6 +122,7 @@
             <figure>
               <figcaption>Производство печатных плат</figcaption>
               <picture>
+                <!-- 1x: 370x620 ; 2x: 740x1240 -->
                 <source type="image/webp" srcset="./img/boards-production.webp 1x, ./img/boards-production@2x.webp 2x">
                 <img loading="lazy" src="./img/boards-production.png" srcset="./img/boards-production@2x.png 2x"
                   width="370" height="620" alt="печатная плата в процессе производства">
@@ -132,6 +135,7 @@
             <figure>
               <figcaption>Монтаж печатных плат</figcaption>
               <picture>
+                <!-- 1x: 370x620 ; 2x: 740x1240 -->
                 <source type="image/webp" srcset="./img/boards-mounting.webp 1x, ./img/boards-mounting@2x.webp 2x">
                 <img loading="lazy" src="./img/boards-mounting.jpg" srcset="./img/boards-mounting@2x.jpg 2x" width="370"
                   height="620" alt="пайка микросхемы к плате">
@@ -144,6 +148,7 @@
             <figure>
               <figcaption>Комплектующие для светотехники</figcaption>
               <picture>
+                <!-- 1x: 370x620 ; 2x: 740x1240 -->
                 <source type="image/webp" srcset="./img/accessories.webp 1x, ./img/accessories@2x.webp 2x">
                 <img loading="lazy" src="./img/accessories.jpg" srcset="./img/accessories@2x.jpg 2x" width="370"
                   height="620" alt="светодиодная лента">
@@ -161,9 +166,9 @@
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__data">
               <input id="name" type="text" name="user-name" required placeholder="Имя">
-              <label class="visually-hidden" for="name"></label>
+              <label class="visually-hidden" for="name">имя пользователя</label>
               <input id="tel" type="tel" name="user-tel" required placeholder="Телефон" minlength="14" maxlength="14">
-              <label class="visually-hidden" for="tel"></label>
+              <label class="visually-hidden" for="tel">номер телефона</label>
               <textarea name="text" id="text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
             </fieldset>
             <fieldset class="form__submit">
@@ -205,21 +210,21 @@
       </div>
       <nav class="footer__nav accordion">
         <div class="footer__menu accordion__item accordion__item--opened">
-          <h3 class="footer__title">Разделы сайта</h3>
+          <h3>Разделы сайта</h3>
           <ul class="footer__list-menu accordion__menu">
-            <li class="footer__item"><a href="#about">О компании</a></li>
-            <li class="footer__item"><a href="#">Продукты</a></li>
-            <li class="footer__item"><a href="#">Производство печатных плат</a></li>
-            <li class="footer__item"><a href="#">Монтаж печатных плат</a></li>
-            <li class="footer__item"><a href="#">Комплектующие</a></li>
-            <li class="footer__item"><a href="#">Доставка</a></li>
-            <li class="footer__item"><a href="#">Контакты</a></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#">Производство печатных плат</a></li>
+            <li><a href="#">Комплектующие</a></li>
+            <li><a href="#">Монтаж печатных плат</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
           <button class="footer__menu-button accordion__toggler" type="button"
             aria-label="открыть/закрыть меню"></button>
         </div>
         <div class="footer__contacts accordion__item accordion__item--opened">
-          <h3 class="footer__title">Наш офис</h3>
+          <h3>Наш офис</h3>
           <ul class="footer__list-contacts accordion__menu">
             <li>г. Мытищи, Олимпийский проспект, д.10</li>
             <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
@@ -243,9 +248,9 @@
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="modal__form " action="https://echo.htmlacademy.ru" method="post">
       <input id="modal-name" type="text" name="user-name" required placeholder="Имя">
-      <label class="visually-hidden" for="modal-name"></label>
+      <label class="visually-hidden" for="modal-name">имя пользователя</label>
       <input id="modal-tel" type="tel" name="user-tel" required placeholder="Телефон" minlength="14" maxlength="14">
-      <label class="visually-hidden" for="modal-tel"></label>
+      <label class="visually-hidden" for="modal-tel">номер телефона</label>
       <textarea name="text" id="modal-text" cols="30" rows="10" required placeholder="Ваш вопрос"></textarea>
       <button type="submit">Отправить</button>
       <input class="visually-hidden" type="checkbox" id="modal-check" value="checked" name="check" checked>
@@ -253,7 +258,7 @@
     </form>
     <button class="modal__button-close" type="button" aria-label="закрыть окно"></button>
   </section>
-  <script src="./js/script.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

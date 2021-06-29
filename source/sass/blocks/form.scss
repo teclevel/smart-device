@@ -6,6 +6,11 @@
   background-color: $blue;
   color: $white;
   min-height: 666px;
+  padding: 59px calc(50% - 605px) 50px;
+  background-image: url("../img/backgrounds/background-form.svg");
+  background-repeat: no-repeat;
+  background-size: 86%;
+  background-position: 50% 50%;
 
   @media (max-width: $tablet-width) {
     background-image: none;
@@ -19,11 +24,7 @@
 .form__center {
   max-width: 1566px;
   margin: 0 auto;
-  padding: 59px 193px 50px;
-  background-image: url("../img/backgrounds/background-form.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 0 40%;
+  padding: 0 20px;
 
   @media (max-width: $tablet-width) {
     background-image: none;
@@ -210,10 +211,10 @@
   }
 
   &:hover {
-    opacity: 0.6;
+    transform: scale(1.05);
   }
 
   &:active {
-    opacity: 1;
+    transform: scale(1);
   }
 }
