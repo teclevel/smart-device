@@ -67,7 +67,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 auto;
-  padding: 33px 10px 0 10px;
+  padding: 50px 10px 0;
   display: flex;
   justify-content: space-between;
   background-color: transparent; }
@@ -187,7 +187,7 @@ img {
   max-width: 1566px;
   width: 100%;
   min-height: 791px;
-  padding: 263px 76px 170px;
+  padding: 263px 76px 153px;
   margin: 0 auto;
   color: #ffffff;
   background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
@@ -219,7 +219,7 @@ img {
   letter-spacing: 0.07em;
   text-transform: uppercase;
   max-width: 817px;
-  margin: 54px 0 28px 0; }
+  margin: 70px 0 28px 0; }
   @media (max-width: 1023px) {
     .lead h1 {
       font-size: 60px;
@@ -630,12 +630,12 @@ img {
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
-  margin: 20px 0 16px 0; }
+  margin: 29px 0 12px; }
   @media (max-width: 1023px) {
     .form h2 {
       font-size: 32px;
       line-height: 45px;
-      margin: 30px 0 16px 0; } }
+      margin: 30px 0 16px; } }
   @media (max-width: 767px) {
     .form h2 {
       font-size: 28px;
@@ -788,20 +788,19 @@ img {
   @media (max-width: 767px) {
     .footer::before {
       position: static; } }
-  .footer::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    bottom: 50px;
-    background-color: #626962;
-    opacity: 0.2; }
-    @media (max-width: 1023px) {
-      .footer::after {
-        bottom: 74px; } }
-    @media (max-width: 767px) {
-      .footer::after {
-        position: static; } }
+  @media (max-width: 1023px) {
+    .footer::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 50px;
+      background-color: #626962;
+      opacity: 0.2;
+      bottom: 74px; } }
+  @media (max-width: 767px) {
+    .footer::after {
+      position: static; } }
 
 .footer__center {
   max-width: 1455px;
@@ -874,11 +873,11 @@ img {
 
 .footer__logo-socials {
   position: relative;
-  padding: 0 16px 20px;
-  margin: 0 auto 0 0; }
+  padding: 16px 20px 16px 0;
+  margin: 0 78px 0 0;
+  flex-grow: 1; }
   @media (max-width: 1023px) {
     .footer__logo-socials {
-      flex-grow: 1;
       margin: 0;
       padding: 0;
       display: flex;
@@ -927,7 +926,7 @@ img {
       min-width: 355px; } }
   @media (max-width: 767px) {
     .footer__menu {
-      min-width: none;
+      min-width: 0;
       width: 100%; } }
   @media (max-width: 767px) {
     .footer__menu::after {
@@ -941,6 +940,12 @@ img {
       margin: 0 0 0 -15px;
       background-color: #626962;
       opacity: 0.2; } }
+
+.footer__menu-button {
+  display: none; }
+  @media (max-width: 767px) {
+    .footer__menu-button {
+      display: block; } }
 
 .footer__list-menu {
   font-weight: normal;
@@ -960,14 +965,13 @@ img {
     .footer__list-menu {
       padding: 0 0 25px 0; } }
 
-@media (max-width: 767px) {
-  .footer__list-menu li {
-    min-width: 270px; } }
+.footer__list-menu li {
+  padding: 0 20px 0 0; }
 
 .footer__contacts {
   position: relative;
   margin: 0 0 0 auto; }
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     .footer__contacts {
       margin: 0;
       padding: 0 5px 0 0; } }
@@ -1005,19 +1009,24 @@ img {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 45px 0 0;
+  padding: 45px 20px 0 0;
   text-transform: uppercase; }
+  .footer__rights::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 45px;
+    background-color: #626962;
+    opacity: 0.2; }
+    @media (max-width: 1023px) {
+      .footer__rights::before {
+        content: none; } }
   @media (max-width: 767px) {
     .footer__rights {
       text-align: center;
       flex-direction: column;
       padding: 29px 0 0; } }
-
-.footer__menu-button {
-  display: none; }
-  @media (max-width: 767px) {
-    .footer__menu-button {
-      display: block; } }
 
 @media (max-width: 1023px) {
   .footer__rights-desktop,
@@ -1034,7 +1043,8 @@ img {
       display: none; } }
 
 .footer__rights-confidentiality {
-  margin: 0 auto 0 0; }
+  margin: 0 auto 0 0;
+  padding: 0 20px 0 0; }
   @media (max-width: 767px) {
     .footer__rights-confidentiality {
       margin: 0 0 8px; } }
