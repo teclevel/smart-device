@@ -22,15 +22,14 @@
   }
 
   &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    bottom: 50px;
-    background-color: $grey-line;
-    opacity: 0.2;
-
     @media (max-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 50px;
+      background-color: $grey-line;
+      opacity: 0.2;
       bottom: 74px;
     }
 
@@ -84,7 +83,6 @@
   text-transform: uppercase;
 
   @media (max-width: $mobile-width) {
-    // margin: 0;
     margin: 30px 0;
   }
 }
@@ -127,11 +125,11 @@
 
 .footer__logo-socials {
   position: relative;
-  padding: 16px 8px;
-  margin: 0 207px 0 0;
+  padding: 16px 20px 16px 0;
+  margin: 0 78px 0 0;
+  flex-grow: 1;
 
   @media (max-width: $tablet-width) {
-    flex-grow: 1;
     margin: 0;
     padding: 0;
     display: flex;
@@ -183,13 +181,14 @@
 
 .footer__menu {
   position: relative;
-  width: 530px;
+  min-width: 530px;
 
   @media (max-width: $tablet-width) {
-    width: 355px;
+    min-width: 355px;
   }
 
   @media (max-width: $mobile-width) {
+    min-width: 0;
     width: 100%;
   }
 
@@ -206,6 +205,14 @@
       background-color: $grey-line;
       opacity: 0.2;
     }
+  }
+}
+
+.footer__menu-button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
   }
 }
 
@@ -231,15 +238,15 @@
 }
 
 .footer__list-menu li {
-  @media (max-width: $mobile-width) {
-    min-width: 270px;
-  }
+  padding: 0 20px 0 0;
 }
 
 .footer__contacts {
   position: relative;
+  margin: 0 0 0 auto;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
+    margin: 0;
     padding: 0 5px 0 0;
   }
 
@@ -282,8 +289,22 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 45px 0 0;
+  padding: 45px 20px 0 0;
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 45px;
+    background-color: $grey-line;
+    opacity: 0.2;
+
+    @media (max-width: $tablet-width) {
+      content: none;
+    }
+  }
 
   @media (max-width: $mobile-width) {
     text-align: center;
@@ -292,13 +313,6 @@
   }
 }
 
-.footer__menu-button {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: block;
-  }
-}
 
 .footer__rights-desktop,
 .footer__service {
@@ -321,6 +335,7 @@
 
 .footer__rights-confidentiality {
   margin: 0 auto 0 0;
+  padding: 0 20px 0 0;
 
   @media (max-width: $mobile-width) {
     margin: 0 0 8px;
