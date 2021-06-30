@@ -7,7 +7,7 @@
 
   function cropText() {
     const cropElements = document.querySelectorAll('.about__text-crop');
-    const size = 200;
+    const size = 224;
     const endCharacter = '..';
 
     cropElements.forEach((el) => {
