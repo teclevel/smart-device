@@ -57,15 +57,15 @@
     top: -1px;
   }
 
+  &:hover h3,
+  &:hover p {
+    color: $white;
+  }
+
   &:hover {
     background-color: $blue;
     color: $white;
     border-color: $blue;
-  }
-
-  &:hover .features__card-title,
-  &:hover .features__card-description {
-    color: $white;
   }
 }
 

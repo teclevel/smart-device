@@ -373,13 +373,13 @@ img {
     background-color: #00b2ff;
     left: -1px;
     top: -1px; }
+  .features__list li:hover h3,
+  .features__list li:hover p {
+    color: #ffffff; }
   .features__list li:hover {
     background-color: #00b2ff;
     color: #ffffff;
     border-color: #00b2ff; }
-  .features__list li:hover .features__card-title,
-  .features__list li:hover .features__card-description {
-    color: #ffffff; }
 
 .features h3 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
