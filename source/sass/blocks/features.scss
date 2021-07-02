@@ -63,8 +63,8 @@
     border-color: $blue;
   }
 
-  &:hover .features__card-title,
-  &:hover .features__card-description {
+  &:hover h3,
+  &:hover p {
     color: $white;
   }
 }

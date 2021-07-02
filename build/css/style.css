@@ -377,8 +377,8 @@ img {
     background-color: #00b2ff;
     color: #ffffff;
     border-color: #00b2ff; }
-  .features__list li:hover .features__card-title,
-  .features__list li:hover .features__card-description {
+  .features__list li:hover h3,
+  .features__list li:hover p {
     color: #ffffff; }
 
 .features h3 {
