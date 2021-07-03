@@ -199,7 +199,7 @@ img {
   padding: 263px 76px 174px;
   margin: 0 auto;
   color: #ffffff;
-  background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
+  background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/polygons-header.svg");
   background-repeat: no-repeat;
   background-position: 100% 71%, 95% 50%;
   background-size: auto, auto; }
@@ -608,10 +608,10 @@ img {
   color: #ffffff;
   min-height: 666px;
   padding: 59px calc(50% - 605px) 50px;
-  background-image: url("../img/backgrounds/background-form.svg");
+  background-image: url("../img/backgrounds/airplane-form.png"), url("../img/backgrounds/triangles-form.svg"), url("../img/backgrounds/polygons-header.svg");
   background-repeat: no-repeat;
-  background-size: 86%;
-  background-position: 50% 50%; }
+  background-size: 503px, 19%, 668px;
+  background-position: calc(50% - 353px) 42%, calc(-5% - -1627px) calc(50% - -34px), calc(50% - 448px) calc(50% - 75px); }
   @media (max-width: 1023px) {
     .form {
       background-image: none; } }
