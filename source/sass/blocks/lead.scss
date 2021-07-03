@@ -6,30 +6,35 @@
 }
 
 .lead__center {
-  max-width: 1566px;
+  max-width: 1570px;
   width: 100%;
   min-height: 791px;
-  padding: 263px 76px 153px;
+  padding: 263px 76px 174px;
   margin: 0 auto;
   color: $white;
   background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
   background-repeat: no-repeat;
-  background-position: 100% 71%, 50% 50%;
+  background-position: 100% 71%, 95% 50%;
   background-size: auto, auto;
 
+  @media (max-width: $desktop) {
+    background-position: 121% 59%, 100% 50%;
+    background-size: 58%, 50%;
+  }
+
   @media (max-width: $tablet-width) {
-    min-height: 688px;
+    min-height: 686px;
     background-repeat: no-repeat;
-    background-position: 158% 32%, 49% -119px;
-    background-size: 58%, 191%;
-    padding: 136px 91px 157px;
+    background-position: 162% 33%, 179% -19%;
+    background-size: 59%, 68%;
+    padding: 136px 91px 50px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 645px;
-    padding: 232px 17px 70px;
-    background-position: 100% 21%, 55% -130px;
-    background-size: 98%, 449%;
+    padding: 232px 17px 50px;
+    background-position: calc(60% - -5vw) 92px, calc(-10% - -42vw) calc(-51% - -38px);
+    background-size: 300px, 507px;
   }
 }
 
@@ -44,8 +49,8 @@
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  max-width: 817px;
-  margin: 70px 0 28px 0;
+  max-width: 51%;
+  margin: 51px 0 29px;
 
   @media (max-width: $tablet-width) {
     font-size: 60px;
@@ -57,6 +62,7 @@
     font-size: 40px;
     line-height: 47px;
     max-width: 270px;
+    margin: 54px 0 28px;
   }
 }
 
@@ -68,7 +74,7 @@
   line-height: 34px;
   padding: 0 0 0 95px;
   margin: 0 0 42px 0;
-  max-width: 790px;
+  max-width: 50%;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
@@ -159,7 +165,7 @@
   line-height: 16px;
   opacity: 0.5;
   transform: rotate(-90deg) translate(-100px, 0);
-  margin: 88px 0 0 0;
+  margin: 68px 0 0 0;
   display: block;
   width: 154px;
   transform-origin: 0 0;

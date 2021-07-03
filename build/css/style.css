@@ -67,7 +67,7 @@ img {
   left: 0;
   right: 0;
   margin: 0 auto;
-  padding: 50px 10px 0;
+  padding: 33px 10px 0;
   display: flex;
   justify-content: space-between;
   background-color: transparent; }
@@ -91,29 +91,34 @@ img {
       display: none; } }
 
 .header__contacts {
-  display: flex;
-  padding: 0 0 0 20px; }
+  display: flex; }
 
 .header__contacts-list {
   margin: 0 45px;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 33px;
-       column-gap: 33px; }
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  -moz-column-gap: 78px;
+       column-gap: 78px;
+  row-gap: 10px; }
   @media (max-width: 1023px) {
     .header__contacts-list {
-      margin: 0; } }
+      margin: 0;
+      -moz-column-gap: 34px;
+           column-gap: 34px; } }
+  @media (max-width: 767px) {
+    .header__contacts-list {
+      -moz-column-gap: 20px;
+           column-gap: 20px; } }
 
 .header__contacts-list li {
   align-self: center;
-  padding: 5px;
-  min-width: 187px; }
+  padding: 5px; }
   @media (max-width: 1023px) {
     .header__contacts-list li {
-      padding: 0;
-      min-width: 0; } }
+      padding: 0; } }
 
 .header__contacts-list a {
   position: relative;
@@ -124,9 +129,7 @@ img {
   line-height: 18px;
   color: #ffffff;
   display: flex;
-  align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px; }
+  align-items: center; }
   .header__contacts-list a:hover, .header__contacts-list a:focus {
     opacity: 0.5; }
   .header__contacts-list a:active {
@@ -137,15 +140,21 @@ img {
   .header__tel {
     display: none; } }
 
-@media (max-width: 1023px) {
-  .header__logo-letter {
-    width: 25px;
-    height: 19px; } }
+.header__logo-letter {
+  margin: 0 20px 0 0; }
+  @media (max-width: 1023px) {
+    .header__logo-letter {
+      width: 25px;
+      height: 19px;
+      margin: 0; } }
 
-@media (max-width: 1023px) {
-  .header__logo-phone-call {
-    width: 24px;
-    height: 24px; } }
+.header__logo-phone-call {
+  margin: 0 14px 0 0; }
+  @media (max-width: 1023px) {
+    .header__logo-phone-call {
+      width: 24px;
+      height: 24px;
+      margin: 0; } }
 
 .header__button-order {
   font-weight: bold;
@@ -156,7 +165,7 @@ img {
   text-transform: uppercase;
   background-color: transparent;
   color: #ffffff;
-  height: 45px;
+  min-height: 45px;
   border: 1px solid #ffffff;
   border-radius: 5px;
   align-self: center;
@@ -184,29 +193,33 @@ img {
   background-size: cover; }
 
 .lead__center {
-  max-width: 1566px;
+  max-width: 1570px;
   width: 100%;
   min-height: 791px;
-  padding: 263px 76px 153px;
+  padding: 263px 76px 174px;
   margin: 0 auto;
   color: #ffffff;
   background-image: url("../img/backgrounds/boards.png"), url("../img/backgrounds/poligons-header.svg");
   background-repeat: no-repeat;
-  background-position: 100% 71%, 50% 50%;
+  background-position: 100% 71%, 95% 50%;
   background-size: auto, auto; }
+  @media (max-width: 1300px) {
+    .lead__center {
+      background-position: 121% 59%, 100% 50%;
+      background-size: 58%, 50%; } }
   @media (max-width: 1023px) {
     .lead__center {
-      min-height: 688px;
+      min-height: 686px;
       background-repeat: no-repeat;
-      background-position: 158% 32%, 49% -119px;
-      background-size: 58%, 191%;
-      padding: 136px 91px 157px; } }
+      background-position: 162% 33%, 179% -19%;
+      background-size: 59%, 68%;
+      padding: 136px 91px 50px; } }
   @media (max-width: 767px) {
     .lead__center {
       min-height: 645px;
-      padding: 232px 17px 70px;
-      background-position: 100% 21%, 55% -130px;
-      background-size: 98%, 449%; } }
+      padding: 232px 17px 50px;
+      background-position: calc(60% - -5vw) 92px, calc(-10% - -42vw) calc(-51% - -38px);
+      background-size: 300px, 507px; } }
 
 .lead a {
   color: inherit;
@@ -218,8 +231,8 @@ img {
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  max-width: 817px;
-  margin: 70px 0 28px 0; }
+  max-width: 51%;
+  margin: 51px 0 29px; }
   @media (max-width: 1023px) {
     .lead h1 {
       font-size: 60px;
@@ -229,7 +242,8 @@ img {
     .lead h1 {
       font-size: 40px;
       line-height: 47px;
-      max-width: 270px; } }
+      max-width: 270px;
+      margin: 54px 0 28px; } }
 
 .lead p {
   position: relative;
@@ -239,7 +253,7 @@ img {
   line-height: 34px;
   padding: 0 0 0 95px;
   margin: 0 0 42px 0;
-  max-width: 790px; }
+  max-width: 50%; }
   @media (max-width: 1023px) {
     .lead p {
       font-size: 18px;
@@ -311,7 +325,7 @@ img {
   line-height: 16px;
   opacity: 0.5;
   transform: rotate(-90deg) translate(-100px, 0);
-  margin: 88px 0 0 0;
+  margin: 68px 0 0 0;
   display: block;
   width: 154px;
   transform-origin: 0 0; }
