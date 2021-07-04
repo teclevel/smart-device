@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0 14px 65px;
+    padding: 15px 14px 60px;
   }
 
   &::before {
@@ -73,7 +73,7 @@
 
   @media (max-width: $mobile-width) {
     min-height: 110px;
-    margin: 36px 0 0 0;
+    margin: 42px 0 0 0;
   }
 }
 

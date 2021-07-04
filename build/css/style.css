@@ -363,6 +363,12 @@ img {
       grid-template-columns: 1fr;
       row-gap: 20px; } }
 
+.features__list br {
+  display: none; }
+  @media (max-width: 767px) {
+    .features__list br {
+      display: block; } }
+
 .features__list li {
   color: #00b2ff;
   position: relative;
@@ -377,8 +383,8 @@ img {
       min-height: 234px; } }
   @media (max-width: 767px) {
     .features__list li {
-      padding: 24px 15px 18px 26px;
-      min-height: 232px; } }
+      padding: 24px 15px 20px 25px;
+      min-height: 230px; } }
   .features__list li::before {
     position: absolute;
     content: "";
@@ -435,7 +441,7 @@ img {
       padding: 0 25px 82px 212px; } }
   @media (max-width: 767px) {
     .about {
-      padding: 0 14px 65px; } }
+      padding: 15px 14px 60px; } }
   .about::before {
     position: absolute;
     content: "";
@@ -486,7 +492,7 @@ img {
   @media (max-width: 767px) {
     .about__text-crop {
       min-height: 110px;
-      margin: 36px 0 0 0; } }
+      margin: 42px 0 0 0; } }
 
 .about__button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -559,7 +565,8 @@ img {
     .offer h2 {
       font-size: 28px;
       line-height: 39px;
-      margin: 0 0 40px 0; } }
+      margin: 0 0 40px 0;
+      padding: 0 0 0 10px; } }
 
 .offer figure {
   position: relative;
@@ -621,7 +628,8 @@ img {
       background-image: none; } }
   @media (max-width: 767px) {
     .form {
-      min-height: 600px; } }
+      min-height: 600px;
+      padding: 11px 15px 41px; } }
 
 .form__center {
   max-width: 1566px;
@@ -631,9 +639,6 @@ img {
     .form__center {
       background-image: none;
       padding: 0; } }
-  @media (max-width: 767px) {
-    .form__center {
-      padding: 2px 15px 41px; } }
 
 .form__wrapper {
   margin: 0 0 0 auto;
@@ -782,7 +787,8 @@ img {
       min-width: 280px; } }
   @media (max-width: 767px) {
     .form button {
-      margin: 0 0 30px 0; } }
+      margin: 0 0 30px 0;
+      min-width: 100%; } }
   .form button:hover {
     transform: scale(1.05); }
   .form button:active {
@@ -865,6 +871,10 @@ img {
       letter-spacing: 0.04em;
       text-transform: uppercase;
       padding: 0 0 0 14px; } }
+  @media (max-width: 767px) {
+    .footer__tablet {
+      margin: 9px 0 18px;
+      padding: 0; } }
 
 @media (max-width: 1023px) {
   .footer__desktop {
@@ -1061,7 +1071,8 @@ img {
   padding: 0 20px 0 0; }
   @media (max-width: 767px) {
     .footer__rights-confidentiality {
-      margin: 0 0 8px; } }
+      margin: 0 0 8px;
+      padding: 0; } }
 
 .accordion__toggler {
   display: none; }

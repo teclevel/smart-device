@@ -95,6 +95,11 @@
     text-transform: uppercase;
     padding: 0 0 0 14px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 9px 0 18px;
+    padding: 0;
+  }
 }
 
 .footer__desktop {
@@ -335,5 +340,6 @@
 
   @media (max-width: $mobile-width) {
     margin: 0 0 8px;
+    padding: 0;
   }
 }
