@@ -104,6 +104,7 @@
 
 .form textarea {
   height: 154px;
+  resize: none;
 
   @media (max-width: $mobile-width) {
     height: 104px;

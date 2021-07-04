@@ -700,7 +700,8 @@ img {
       width: 100%; } }
 
 .form textarea {
-  height: 154px; }
+  height: 154px;
+  resize: none; }
   @media (max-width: 767px) {
     .form textarea {
       height: 104px;
