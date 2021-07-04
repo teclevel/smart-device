@@ -161,6 +161,11 @@
   }
 }
 
+.footer__logo-socials a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .footer__link-logo {
   display: block;
   margin: 0 0 50px 0;
@@ -171,22 +176,15 @@
 }
 
 .footer__socials {
+  display: flex;
+
   @media (max-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
     order: 1;
   }
 }
 
-.footer__socials a {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 7px 0 0;
-
-  @media (max-width: $tablet-width) {
-    margin: 0;
-  }
+.footer__socials a:not(:last-child) {
+  margin: 0 15px 0 0;
 }
 
 .footer__menu {

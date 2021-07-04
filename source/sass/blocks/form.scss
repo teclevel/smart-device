@@ -74,18 +74,24 @@
   border: none;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 31px;
-  row-gap: 40px;
   padding: 0;
-  margin: 0 0 43px 0;
+  margin: 0;
+}
 
-  @media (max-width: $tablet-width) {
-    margin: 0 0 51px 0;
-  }
+.form__data * {
+  margin: 0 0 40px 0;
 
   @media (max-width: $mobile-width) {
-    row-gap: 30px;
-    margin: 0 0 31px 0;
+    margin: 0 0 30px 0;
+  }
+}
+
+.form__data input[name="user-name"] {
+  align-self: baseline;
+  margin: 0 31px 0 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 30px 0;
   }
 }
 
@@ -106,9 +112,12 @@
   height: 154px;
   resize: none;
 
+  @media (max-width: $tablet-width) {
+    height: 165px;
+  }
+
   @media (max-width: $mobile-width) {
     height: 104px;
-    margin: 0;
   }
 }
 
@@ -179,7 +188,6 @@
   border: none;
   display: flex;
   align-items: center;
-  column-gap: 38px;
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
@@ -199,6 +207,7 @@
   border-radius: 5px;
   min-width: 270px;
   padding: 15px;
+  margin: 0 38px 0 0;
 
   @media (max-width: $tablet-width) {
     min-width: 280px;
