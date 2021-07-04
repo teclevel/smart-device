@@ -89,6 +89,11 @@
   left: 40px;
   max-width: 172px;
 
+  @media (max-width: $tablet-width) {
+    top: 39px;
+    left: 46px;
+  }
+
   @media (max-width: $mobile-width) {
     top: 21px;
     left: 36px;

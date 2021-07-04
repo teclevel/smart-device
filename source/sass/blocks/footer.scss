@@ -48,8 +48,6 @@
 
   @media (max-width: $tablet-width) {
     padding: 15px 25px;
-    display: grid;
-    grid-template-rows: repeat(min-content, 3);
   }
 
   @media (max-width: $mobile-width) {
@@ -288,7 +286,7 @@
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 45px 20px 0 0;
+  padding: 45px 0 0 0;
   text-transform: uppercase;
 
   &::before {

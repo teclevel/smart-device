@@ -582,6 +582,10 @@ img {
   top: 50px;
   left: 40px;
   max-width: 172px; }
+  @media (max-width: 1023px) {
+    .offer figcaption {
+      top: 39px;
+      left: 46px; } }
   @media (max-width: 767px) {
     .offer figcaption {
       top: 21px;
@@ -626,7 +630,7 @@ img {
   @media (max-width: 1023px) {
     .form__center {
       background-image: none;
-      padding: 49px 0 104px; } }
+      padding: 0; } }
   @media (max-width: 767px) {
     .form__center {
       padding: 2px 15px 41px; } }
@@ -649,7 +653,7 @@ img {
     .form h2 {
       font-size: 32px;
       line-height: 45px;
-      margin: 30px 0 16px; } }
+      margin: 21px 0 16px; } }
   @media (max-width: 767px) {
     .form h2 {
       font-size: 28px;
@@ -775,7 +779,7 @@ img {
   padding: 15px; }
   @media (max-width: 1023px) {
     .form button {
-      width: 100%; } }
+      min-width: 280px; } }
   @media (max-width: 767px) {
     .form button {
       margin: 0 0 30px 0; } }
@@ -824,10 +828,7 @@ img {
   flex-wrap: wrap; }
   @media (max-width: 1023px) {
     .footer__center {
-      padding: 15px 25px;
-      display: grid;
-      grid-template-rows: repeat(-webkit-min-content, 3);
-      grid-template-rows: repeat(min-content, 3); } }
+      padding: 15px 25px; } }
   @media (max-width: 767px) {
     .footer__center {
       padding: 50px 15px;
@@ -1022,7 +1023,7 @@ img {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  padding: 45px 20px 0 0;
+  padding: 45px 0 0 0;
   text-transform: uppercase; }
   .footer__rights::before {
     position: absolute;
