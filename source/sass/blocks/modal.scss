@@ -68,16 +68,21 @@
   resize: none;
 }
 
+.modal__wrapper-checkbox {
+  position: relative;
+  order: 1;
+  margin: 0;
+}
+
 .modal input[type="checkbox"] {
-  width: 0;
+  width: 1px;
+  top: 10px;
+  left: 8px;
 }
 
 .modal input[type="checkbox"] + label {
-  position: relative;
   padding: 0 0 0 30px;
   cursor: pointer;
-  order: 1;
-  margin: 0;
 
   &::before {
     position: absolute;

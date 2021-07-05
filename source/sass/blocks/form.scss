@@ -137,8 +137,33 @@
   }
 }
 
-.form input[class="visually-hidden"] {
+.form__submit {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.form input[type="checkbox"] {
   width: 1px;
+  top: 18px;
+  right: 254px;
+
+  @media (max-width: $tablet-width) {
+    top: 18px;
+    right: 264px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 89px;
+    right: calc(50% + 24vw);
+  }
 }
 
 .form input[type="checkbox"] + label {
@@ -179,18 +204,6 @@
 .form input[type="checkbox"]:focus + label {
   &::before {
     border-color: $black;
-  }
-}
-
-.form__submit {
-  padding: 0;
-  margin: 0;
-  border: none;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: $mobile-width) {
-    flex-direction: column;
   }
 }
 
