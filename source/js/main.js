@@ -197,12 +197,12 @@
       }
     });
 
-    element.addEventListener('blur', () => {
-      // console.log(element.placeholder);
-      if (element.value === element.minLength) {
-        element.value = element.placeholder;
-      }
-    });
+    // element.addEventListener('blur', () => {
+    //   // console.log(element.placeholder);
+    //   if (element.value === element.minLength) {
+    //     element.value = element.placeholder;
+    //   }
+    // });
 
     element.addEventListener('keypress', (event) => {
 
