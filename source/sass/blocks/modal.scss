@@ -1,20 +1,33 @@
 .modal {
   position: fixed;
-  z-index: 10;
+  width: 490px;
+  max-width: 100%;
+  height: 605px;
+  max-height: 100%;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: $white;
+}
+
+.modal__guts {
   background-color: $blue;
   font-family: $font-family--description;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: $white;
-  max-width: 490px;
-  height: 605px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   margin: auto;
   padding: 29px 39px;
+  overflow-y: auto;
 }
 
 .modal h2 {
@@ -53,6 +66,10 @@
 .modal textarea {
   height: 104px;
   resize: none;
+}
+
+.modal input[type="checkbox"] {
+  width: 0;
 }
 
 .modal input[type="checkbox"] + label {
