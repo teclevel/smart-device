@@ -208,6 +208,7 @@
   min-width: 270px;
   padding: 15px;
   margin: 0 38px 0 0;
+  order: -1;
 
   @media (max-width: $tablet-width) {
     min-width: 280px;

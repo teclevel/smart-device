@@ -35,12 +35,12 @@
 }
 
 .offer__list a {
-  position: relative;
   text-decoration: none;
   color: inherit;
 
   &:hover figure {
     opacity: 0.5;
+    outline: auto;
   }
 }
 
