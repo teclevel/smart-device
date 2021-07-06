@@ -183,84 +183,84 @@
 })();
 
 
-// /* поле ввода номера телефона Маска +7( */
+// /* поле ввода номера телефона Маска +7( */ .// не удаляет половину маски
 
-
-// (function () {
-//   const inputTel = document.querySelectorAll('[type="tel"]');
-//   inputTel.forEach((element) => {
-
-//     element.addEventListener('focus', () => {
-//       const prefixTel = '+7(';
-//       if (!/^\+\d*$/.test(element.value)) {
-//         element.value = prefixTel;
-//       }
-//     });
-
-//     // element.addEventListener('blur', () => {
-//     //   // console.log(element.placeholder);
-//     //   if (element.value === element.minLength) {
-//     //     element.value = element.placeholder;
-//     //   }
-//     // });
-
-//     element.addEventListener('keypress', (event) => {
-
-//       if (!/\d/.test(event.key)) {
-//         event.preventDefault();
-//       }
-//     });
-
-//     element.addEventListener('input', () => {
-
-//       if (element.value.length === 6) {
-//         element.value = `${element.value})`;
-//       }
-//     });
-//   });
-// })();
-
-
-/* поле ввода номера телефона Маска +7(___)______*/
 
 (function () {
-  window.addEventListener ('DOMContentLoaded', () => {
-    function setCursorPosition(pos, elem) {
-      elem.focus();
-      if (elem.setSelectionRange) { elem.setSelectionRange(pos, pos); }
-      else if (elem.createTextRange) {
-        const range = elem.createTextRange();
-        range.collapse(true);
-        range.moveEnd('character', pos);
-        range.moveStart('character', pos);
-        range.select();
+  const inputTel = document.querySelectorAll('[type="tel"]');
+  inputTel.forEach((element) => {
+
+    element.addEventListener('focus', () => {
+      const prefixTel = '+7(';
+      if (!/^\+\d*$/.test(element.value)) {
+        element.value = prefixTel;
       }
-    }
+    });
 
-    function mask(event) {
-      const matrix = '+7(___)_______';
-      let i = 0;
-      const def = matrix.replace(/\D/g, '');
-      let val = this.value.replace(/\D/g, '');
+    // element.addEventListener('blur', () => {
+    //   // console.log(element.placeholder);
+    //   if (element.value === element.minLength) {
+    //     element.value = element.placeholder;
+    //   }
+    // });
 
-      if (def.length >= val.length) { val = def; }
+    element.addEventListener('keypress', (event) => {
 
-      this.value = matrix.replace(/./g, function (a) {
-            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-          });
-      if (event.type === 'blur') {
-        if (this.value.length === 2) { this.value = ''; }
-      } else { setCursorPosition(this.value.length, this); }
-    }
+      if (!/\d/.test(event.key)) {
+        event.preventDefault();
+      }
+    });
 
-    const input = document.querySelector('[type="tel"]');
+    element.addEventListener('input', () => {
 
-    input.addEventListener('input', mask, false);
-    input.addEventListener('focus', mask, false);
-    input.addEventListener('blur', mask, false);
+      if (element.value.length === 6) {
+        element.value = `${element.value})`;
+      }
+    });
   });
-
 })();
+
+
+/* поле ввода номера телефона Маска +7(___)______*/   //не соответствует
+
+// (function () {
+//   window.addEventListener ('DOMContentLoaded', () => {
+//     function setCursorPosition(pos, elem) {
+//       elem.focus();
+//       if (elem.setSelectionRange) { elem.setSelectionRange(pos, pos); }
+//       else if (elem.createTextRange) {
+//         const range = elem.createTextRange();
+//         range.collapse(true);
+//         range.moveEnd('character', pos);
+//         range.moveStart('character', pos);
+//         range.select();
+//       }
+//     }
+
+//     function mask(event) {
+//       const matrix = '+7(___)_______';
+//       let i = 0;
+//       const def = matrix.replace(/\D/g, '');
+//       let val = this.value.replace(/\D/g, '');
+
+//       if (def.length >= val.length) { val = def; }
+
+//       this.value = matrix.replace(/./g, function (a) {
+//             return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+//           });
+//       if (event.type === 'blur') {
+//         if (this.value.length === 2) { this.value = ''; }
+//       } else { setCursorPosition(this.value.length, this); }
+//     }
+
+//     const input = document.querySelector('[type="tel"]');
+
+//     input.addEventListener('input', mask, false);
+//     input.addEventListener('focus', mask, false);
+//     input.addEventListener('blur', mask, false);
+//   });
+
+// })();
 
 
 // /* Тест ввод номера тел */
