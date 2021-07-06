@@ -11,3 +11,5 @@ env:
 extends:
   "htmlacademy/vanilla"
 
+ignorePatterns:
+  - "**/vendor.js"
