@@ -183,54 +183,125 @@
 })();
 
 
-/* поле ввода номера телефона*/
+// /* поле ввода номера телефона Маска +7( */
 
-(function () {
-  const inputTel = document.querySelectorAll('[type="tel"]');
-
-  inputTel.forEach((element) => {
-
-    element.addEventListener('focus', () => {
-      const prefixTel = '+7(';
-      if (!/^\+\d*$/.test(element.value)) {
-        element.value = prefixTel;
-      }
-    });
-
-    // element.addEventListener('blur', () => {
-    //   // console.log(element.placeholder);
-    //   if (element.value === element.minLength) {
-    //     element.value = element.placeholder;
-    //   }
-    // });
-
-    element.addEventListener('keypress', (event) => {
-
-      if (!/\d/.test(event.key)) {
-        event.preventDefault();
-      }
-    });
-
-    element.addEventListener('input', () => {
-
-      if (element.value.length === 6) {
-        element.value = `${element.value})`;
-      }
-    });
-  });
-})();
 
 // (function () {
-//   function testInput(re, str) {
-//     var midString;
+//   const inputTel = document.querySelectorAll('[type="tel"]');
+//   inputTel.forEach((element) => {
 
-//     if (re.test(str)) {
-//       midString = ' содержит ';
-//     } else {
-//       midString = ' не содержит ';
-//     }
-//     console.log(str + midstring + re.source);
+//     element.addEventListener('focus', () => {
+//       const prefixTel = '+7(';
+//       if (!/^\+\d*$/.test(element.value)) {
+//         element.value = prefixTel;
+//       }
+//     });
+
+//     // element.addEventListener('blur', () => {
+//     //   // console.log(element.placeholder);
+//     //   if (element.value === element.minLength) {
+//     //     element.value = element.placeholder;
+//     //   }
+//     // });
+
+//     element.addEventListener('keypress', (event) => {
+
+//       if (!/\d/.test(event.key)) {
+//         event.preventDefault();
+//       }
+//     });
+
+//     element.addEventListener('input', () => {
+
+//       if (element.value.length === 6) {
+//         element.value = `${element.value})`;
+//       }
+//     });
+//   });
+// })();
+
+
+/* поле ввода номера телефона Маска +7(___)______*/
+
+(function () {
+  window.addEventListener ('DOMContentLoaded', () => {
+    function setCursorPosition(pos, elem) {
+      elem.focus();
+      if (elem.setSelectionRange) { elem.setSelectionRange(pos, pos); }
+      else if (elem.createTextRange) {
+        const range = elem.createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+      }
+    }
+
+    function mask(event) {
+      const matrix = '+7(___)_______';
+      let i = 0;
+      const def = matrix.replace(/\D/g, '');
+      let val = this.value.replace(/\D/g, '');
+
+      if (def.length >= val.length) { val = def; }
+
+      this.value = matrix.replace(/./g, function (a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+          });
+      if (event.type === 'blur') {
+        if (this.value.length === 2) { this.value = ''; }
+      } else { setCursorPosition(this.value.length, this); }
+    }
+
+    const input = document.querySelector('[type="tel"]');
+
+    input.addEventListener('input', mask, false);
+    input.addEventListener('focus', mask, false);
+    input.addEventListener('blur', mask, false);
+  });
+
+})();
+
+
+// /* Тест ввод номера тел */
+// const input = document.querySelector('[type="tel"]');
+
+// input.addEventListener('keypress', (evt) => {
+//   if (evt.keyCode < 47 || evt.keyCode > 57) {
+//     evt.preventDefault();
+//   }
+// });
+
+// input.addEventListener('focus', () => {
+//   if (input.value.length === 0) {
+//     input.value = '+7(';
+//     console.log(input.selectionStart);
+//     input.selectionStart = input.value.length;
+//   }
+// });
+
+// input.addEventListener('input', (evt) => {
+//   if (input.selectionStart < 3) {
+//     input.selectionStart = input.value.length;
 //   }
 
-//   testInput('co', 'cobalt');
-// })();
+//   if (input.selectionStart === 6) {
+//     input.value = `${input.value})`;
+//   }
+
+//   if (evt.key === 'Backspace' && input.value.length <= 2) {
+//     evt.preventDefault();
+//   }
+// });
+
+// input.addEventListener('blur', () => {
+//   if (input.value === '+7(') {
+//     input.value = '';
+//   }
+// });
+
+// input.addEventListener('keydown', (evt) => {
+//   if (evt.key === 'Backspace' && input.value.length <= 3) {
+//     evt.preventDefault();
+//   }
+// });
