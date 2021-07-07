@@ -786,7 +786,7 @@ img {
 .form input[type="checkbox"]:focus + label::before {
   border-color: #203c42; }
 
-.form button {
+.form__submit button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -802,15 +802,15 @@ img {
   margin: 0 38px 0 0;
   order: -1; }
   @media (max-width: 1023px) {
-    .form button {
+    .form__submit button {
       min-width: 280px; } }
   @media (max-width: 767px) {
-    .form button {
+    .form__submit button {
       margin: 0 0 30px 0;
       min-width: 100%; } }
-  .form button:hover {
+  .form__submit button:hover {
     transform: scale(1.05); }
-  .form button:active {
+  .form__submit button:active {
     transform: scale(1); }
 
 .footer {
