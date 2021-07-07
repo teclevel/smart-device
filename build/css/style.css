@@ -719,7 +719,9 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
   width: 100%;
   border: none;
-  padding: 14px; }
+  padding: 14px;
+  -webkit-appearance: none;
+  border-radius: 0; }
   @media (max-width: 1023px) {
     .form input,
     .form textarea {
